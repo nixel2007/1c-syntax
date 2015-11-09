@@ -1,0 +1,34 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: 1C
+scopeName: source.1с
+fileTypes: [bsl, os]
+uuid: cf0633ff-beee-424a-a2f7-3dce4093e139
+
+patterns:
+- name: comment.line.double-slash
+  match: (\/\/.*\n)
+
+- name: constant.language
+  match: \b(Неопределено)|(Истина)|(Ложь)|(NULL)\b
+
+- name: entity.name.function
+  match: (?<=Процедура|Функция)[^\(]*
+
+- name: string.quoted.double
+  match: (\"[^\"]{0,}\")
+
+- name: storage.type
+  match: \b((Процедура)|(Функция)|(КонецПроцедуры)|(КонецФункции))\b
+
+- name: storage.modifier
+  match: \b((Знач)|(Экспорт))\b
+
+- name: keyword.control
+  match: \b((Прервать)|(Продолжить)|(Возврат))\b
+
+- name: keyword.operator
+  match: \b((\=)|(\>)|(\<)|(\+)|(\-)|(\;)|(Перем)|(КонецПроцедуры)|(КонецФункции)|(Если)|(Иначе)|(ИначеЕсли)|(Тогда)|(КонецЕсли)|(Пока)|(Для)|(Для Каждого)|(КонецЦикла)|(Попытка)|(Исключение)|(КонецПопытки)|(ВызватьИсключение)|(Новый)|(НЕ)|(И))\b
+
+- name: variable.parameter
+  match: \b((?<=Знач)[^[,\)]]*)\b
