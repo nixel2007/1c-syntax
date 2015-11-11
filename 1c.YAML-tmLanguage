@@ -16,7 +16,7 @@ patterns:
   match: (?<=Процедура|Функция)[^\(]*
 
 - name: string.quoted.double
-  match: ("[^"]{0,}")
+  match: ("[^"]*")
 
 - name: storage.type
   match: \b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b
