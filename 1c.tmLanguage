@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>bsl</string>
+		<string>os</string>
+	</array>
+	<key>name</key>
+	<string>1C</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>(\/\/.*\n)</string>
+			<key>name</key>
+			<string>comment.line.double-slash</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(Неопределено|Истина|Ложь|NULL)\b</string>
+			<key>name</key>
+			<string>constant.language</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=Процедура|Функция)[^\(]*</string>
+			<key>name</key>
+			<string>entity.name.function</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>("[^"]*")</string>
+			<key>name</key>
+			<string>string.quoted.double</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b</string>
+			<key>name</key>
+			<string>storage.type</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(Знач|Экспорт)\b</string>
+			<key>name</key>
+			<string>storage.modifier</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(Прервать|Продолжить|Возврат)\b</string>
+			<key>name</key>
+			<string>keyword.control</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(=|&gt;|&lt;|\+|-|;|)|\b(Перем|КонецПроцедуры|КонецФункции|Если|Иначе|ИначеЕсли|Тогда|КонецЕсли|Пока|Для|Для Каждого|КонецЦикла|(Попытка)|Исключение|КонецПопытки|ВызватьИсключение|Новый|НЕ|И)\b</string>
+			<key>name</key>
+			<string>keyword.operator</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b((?&lt;=Знач)[^[,\)=]]*)\b</string>
+			<key>name</key>
+			<string>variable.parameter</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.1с</string>
+	<key>uuid</key>
+	<string>cf0633ff-beee-424a-a2f7-3dce4093e139</string>
+</dict>
+</plist>
