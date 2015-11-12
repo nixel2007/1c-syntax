@@ -32,3 +32,6 @@ patterns:
 
 - name: variable.parameter
   match: \b((?<=Знач)[^[,\)=]]*)\b
+
+- name: constant.numeric
+  match: (\d+)
