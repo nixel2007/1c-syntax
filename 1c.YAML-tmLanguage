@@ -34,4 +34,4 @@ patterns:
   match: \b((?<=Знач)[^[,\)=]]*)\b
 
 - name: constant.numeric
-  match: \b(\h{8}-(\h{4}-){3}\h{12})|(\d)+\b
+  match: \b((\h{8}-(\h{4}-){3}\h{12})|(\d)+)\b

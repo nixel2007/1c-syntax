@@ -67,7 +67,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(\h{8}-(\h{4}-){3}\h{12})|(\d)+\b</string>
+			<string>\b((\h{8}-(\h{4}-){3}\h{12})|(\d)+)\b</string>
 			<key>name</key>
 			<string>constant.numeric</string>
 		</dict>
