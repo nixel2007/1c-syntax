@@ -6,32 +6,53 @@ fileTypes: [bsl, os]
 uuid: cf0633ff-beee-424a-a2f7-3dce4093e139
 
 patterns:
-- name: comment.line.double-slash
+- name: comment.line.double-slash.1с
   match: (\/\/.*\n)
 
-- name: constant.language
+- name: constant.language.1с
   match: \b(Неопределено|Истина|Ложь|NULL)\b
 
-- name: entity.name.function
+- name: entity.name.function.1с
   match: (?<=Процедура|Функция)[^\(]*
 
-- name: string.quoted.double
+- name: string.quoted.double.1с
   match: ("[^"]*")
 
-- name: storage.type
+- name: storage.type.1с
   match: \b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b
 
-- name: storage.modifier
+- name: storage.modifier.1с
   match: \b(Знач|Экспорт)\b
 
-- name: keyword.control
+- name: keyword.control.1с
   match: \b(Прервать|Продолжить|Возврат)\b
 
-- name: keyword.operator
-  match: (=|>|<|\+|-|;)|\b(Перем|КонецПроцедуры|КонецФункции|Если|Иначе|ИначеЕсли|Тогда|КонецЕсли|Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла|(Попытка)|Исключение|КонецПопытки|ВызватьИсключение|Новый|НЕ|И|ИЛИ)\b
+- name: keyword.control.conditional.1c
+  match: \b(Если|Иначе|ИначеЕсли|Тогда|КонецЕсли)\b
 
-- name: variable.parameter
+- name: keyword.control.exception.1c
+  match: \b(Попытка|Исключение|КонецПопытки|ВызватьИсключение)\b
+
+- name: keyword.control.repeat.1c
+  match: \b(Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла)\b
+
+- name: keyword.operator.logical.1c
+  match: \b(НЕ|И|ИЛИ)\b
+
+- name: keyword.operator.comparison.1c
+  match: <=|>=|=|<|>
+
+- name: keyword.operator.assignment.1c
+  match: (=)
+
+- name: keyword.operator.arithmetic.1c
+  match: (\+|-|\*|\/|%)
+
+- name: keyword.operator.1с
+  match: (;)|\b(Перем|Новый)\b
+
+- name: variable.parameter.1с
   match: \b((?<=Знач)[^[,\)=]]*)\b
 
-- name: constant.numeric
+- name: constant.numeric.1с
   match: \b((\h{8}-(\h{4}-){3}\h{12})|(\d)+)\b

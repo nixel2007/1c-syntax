@@ -15,61 +15,103 @@
 			<key>match</key>
 			<string>(\/\/.*\n)</string>
 			<key>name</key>
-			<string>comment.line.double-slash</string>
+			<string>comment.line.double-slash.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(Неопределено|Истина|Ложь|NULL)\b</string>
 			<key>name</key>
-			<string>constant.language</string>
+			<string>constant.language.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?&lt;=Процедура|Функция)[^\(]*</string>
 			<key>name</key>
-			<string>entity.name.function</string>
+			<string>entity.name.function.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>("[^"]*")</string>
 			<key>name</key>
-			<string>string.quoted.double</string>
+			<string>string.quoted.double.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b</string>
 			<key>name</key>
-			<string>storage.type</string>
+			<string>storage.type.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(Знач|Экспорт)\b</string>
 			<key>name</key>
-			<string>storage.modifier</string>
+			<string>storage.modifier.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(Прервать|Продолжить|Возврат)\b</string>
 			<key>name</key>
-			<string>keyword.control</string>
+			<string>keyword.control.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(=|&gt;|&lt;|\+|-|;)|\b(Перем|КонецПроцедуры|КонецФункции|Если|Иначе|ИначеЕсли|Тогда|КонецЕсли|Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла|(Попытка)|Исключение|КонецПопытки|ВызватьИсключение|Новый|НЕ|И|ИЛИ)\b</string>
+			<string>\b(Если|Иначе|ИначеЕсли|Тогда|КонецЕсли)\b</string>
 			<key>name</key>
-			<string>keyword.operator</string>
+			<string>keyword.control.conditional.1c</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(Попытка|Исключение|КонецПопытки|ВызватьИсключение)\b</string>
+			<key>name</key>
+			<string>keyword.control.exception.1c</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла)\b</string>
+			<key>name</key>
+			<string>keyword.control.repeat.1c</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(НЕ|И|ИЛИ)\b</string>
+			<key>name</key>
+			<string>keyword.operator.logical.1c</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>&lt;=|&gt;=|=|&lt;|&gt;</string>
+			<key>name</key>
+			<string>keyword.operator.comparison.1c</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(=)</string>
+			<key>name</key>
+			<string>keyword.operator.assignment.1c</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\+|-|\*|\/|%)</string>
+			<key>name</key>
+			<string>keyword.operator.arithmetic.1c</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(;)|\b(Перем|Новый)\b</string>
+			<key>name</key>
+			<string>keyword.operator.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b((?&lt;=Знач)[^[,\)=]]*)\b</string>
 			<key>name</key>
-			<string>variable.parameter</string>
+			<string>variable.parameter.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b((\h{8}-(\h{4}-){3}\h{12})|(\d)+)\b</string>
 			<key>name</key>
-			<string>constant.numeric</string>
+			<string>constant.numeric.1с</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
