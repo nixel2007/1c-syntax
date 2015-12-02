@@ -7,10 +7,10 @@ uuid: cf0633ff-beee-424a-a2f7-3dce4093e139
 
 patterns:
 - name: comment.line.double-slash.1с
-  match: (\/\/.*\n)
+  match: (//.*\n)
 
 - name: constant.language.1с
-  match: \b(Неопределено|Истина|Ложь|NULL)\b
+  match: (?i:\b(Неопределено|Истина|Ложь|NULL)\b)
 
 - name: entity.name.function.1с
   match: (?<=Процедура|Функция)[^\(]*
@@ -19,25 +19,25 @@ patterns:
   match: ("[^"]*")
 
 - name: storage.type.1с
-  match: \b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b
+  match: (?i:\b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b)
 
 - name: storage.modifier.1с
-  match: \b(Знач|Экспорт)\b
+  match: (?i:\b(Знач|Экспорт)\b)
 
 - name: keyword.control.1с
-  match: \b(Прервать|Продолжить|Возврат)\b
+  match: (?i:\b(Прервать|Продолжить|Возврат)\b)
 
 - name: keyword.control.conditional.1c
-  match: \b(Если|Иначе|ИначеЕсли|Тогда|КонецЕсли)\b
+  match: (?i:\b(Если|Иначе|ИначеЕсли|Тогда|КонецЕсли)\b)
 
 - name: keyword.control.exception.1c
-  match: \b(Попытка|Исключение|КонецПопытки|ВызватьИсключение)\b
+  match: (?i:\b(Попытка|Исключение|КонецПопытки|ВызватьИсключение)\b)
 
 - name: keyword.control.repeat.1c
-  match: \b(Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла)\b
+  match: (?i:\b(Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла)\b)
 
 - name: keyword.operator.logical.1c
-  match: \b(НЕ|И|ИЛИ)\b
+  match: (?i:\b(НЕ|И|ИЛИ)\b)
 
 - name: keyword.operator.comparison.1c
   match: <=|>=|=|<|>
@@ -46,10 +46,10 @@ patterns:
   match: (=)
 
 - name: keyword.operator.arithmetic.1c
-  match: (\+|-|\*|\/|%)
+  match: (\+|-|\*|/|%)
 
 - name: keyword.operator.1с
-  match: (;)|\b(Перем|Новый)\b
+  match: (;)|(?i:(\b(Перем|Новый)\b))
 
 - name: variable.parameter.1с
   match: \b((?<=Знач)[^[,\)=]]*)\b

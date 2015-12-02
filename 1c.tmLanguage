@@ -13,13 +13,13 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(\/\/.*\n)</string>
+			<string>(//.*\n)</string>
 			<key>name</key>
 			<string>comment.line.double-slash.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(Неопределено|Истина|Ложь|NULL)\b</string>
+			<string>(?i:\b(Неопределено|Истина|Ложь|NULL)\b)</string>
 			<key>name</key>
 			<string>constant.language.1с</string>
 		</dict>
@@ -37,43 +37,43 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b</string>
+			<string>(?i:\b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b)</string>
 			<key>name</key>
 			<string>storage.type.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(Знач|Экспорт)\b</string>
+			<string>(?i:\b(Знач|Экспорт)\b)</string>
 			<key>name</key>
 			<string>storage.modifier.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(Прервать|Продолжить|Возврат)\b</string>
+			<string>(?i:\b(Прервать|Продолжить|Возврат)\b)</string>
 			<key>name</key>
 			<string>keyword.control.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(Если|Иначе|ИначеЕсли|Тогда|КонецЕсли)\b</string>
+			<string>(?i:\b(Если|Иначе|ИначеЕсли|Тогда|КонецЕсли)\b)</string>
 			<key>name</key>
 			<string>keyword.control.conditional.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(Попытка|Исключение|КонецПопытки|ВызватьИсключение)\b</string>
+			<string>(?i:\b(Попытка|Исключение|КонецПопытки|ВызватьИсключение)\b)</string>
 			<key>name</key>
 			<string>keyword.control.exception.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла)\b</string>
+			<string>(?i:\b(Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла)\b)</string>
 			<key>name</key>
 			<string>keyword.control.repeat.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(НЕ|И|ИЛИ)\b</string>
+			<string>(?i:\b(НЕ|И|ИЛИ)\b)</string>
 			<key>name</key>
 			<string>keyword.operator.logical.1c</string>
 		</dict>
@@ -91,13 +91,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\+|-|\*|\/|%)</string>
+			<string>(\+|-|\*|/|%)</string>
 			<key>name</key>
 			<string>keyword.operator.arithmetic.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(;)|\b(Перем|Новый)\b</string>
+			<string>(;)|(?i:(\b(Перем|Новый)\b))</string>
 			<key>name</key>
 			<string>keyword.operator.1с</string>
 		</dict>
