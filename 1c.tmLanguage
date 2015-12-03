@@ -24,6 +24,25 @@
 			<string>string.quoted.double.1с</string>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>\"</string>
+			<key>end</key>
+			<string>\"</string>
+			<key>name</key>
+			<string>string.interpolated.1с</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>constant.character.escape.1с</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>(?i:\b(Неопределено|Истина|Ложь|NULL)\b)</string>
 			<key>name</key>
