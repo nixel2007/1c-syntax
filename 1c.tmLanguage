@@ -15,13 +15,13 @@
 			<key>match</key>
 			<string>(//.*\n)</string>
 			<key>name</key>
-			<string>comment.line.double-slash.1с</string>
+			<string>comment.line.double-slash.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>("[^"]*")</string>
 			<key>name</key>
-			<string>string.quoted.double.1с</string>
+			<string>string.quoted.double.1c</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -29,7 +29,7 @@
 			<key>end</key>
 			<string>\"</string>
 			<key>name</key>
-			<string>string.interpolated.1с</string>
+			<string>string.interpolated.1c</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -38,7 +38,7 @@
 				</dict>
 				<dict>
 					<key>name</key>
-					<string>constant.character.escape.1с</string>
+					<string>constant.character.escape.1c</string>
 				</dict>
 			</array>
 		</dict>
@@ -46,13 +46,13 @@
 			<key>match</key>
 			<string>(?i:\b(Неопределено|Истина|Ложь|NULL)\b)</string>
 			<key>name</key>
-			<string>constant.language.1с</string>
+			<string>constant.language.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b</string>
 			<key>name</key>
-			<string>constant.numeric.1с</string>
+			<string>constant.numeric.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -64,19 +64,19 @@
 			<key>match</key>
 			<string>(?&lt;=Процедура|Функция)[^\(]*</string>
 			<key>name</key>
-			<string>entity.name.function.1с</string>
+			<string>entity.name.function.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i:\b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b)</string>
 			<key>name</key>
-			<string>storage.type.1с</string>
+			<string>storage.type.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i:\b(Знач|Экспорт)\b)</string>
 			<key>name</key>
-			<string>storage.modifier.1с</string>
+			<string>storage.modifier.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -88,7 +88,7 @@
 			<key>match</key>
 			<string>(?i:\b(Прервать|Продолжить|Возврат)\b)</string>
 			<key>name</key>
-			<string>keyword.control.1с</string>
+			<string>keyword.control.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -136,17 +136,17 @@
 			<key>match</key>
 			<string>(,|;|\?)|(?i:(\b(Перем|Новый)\b))</string>
 			<key>name</key>
-			<string>keyword.operator.1с</string>
+			<string>keyword.operator.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b((?&lt;=Знач)[^[,\)=]]*)\b</string>
 			<key>name</key>
-			<string>variable.parameter.1с</string>
+			<string>variable.parameter.1c</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.1с</string>
+	<string>source.1c</string>
 	<key>uuid</key>
 	<string>cf0633ff-beee-424a-a2f7-3dce4093e139</string>
 </dict>
