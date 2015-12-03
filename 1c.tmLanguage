@@ -19,21 +19,33 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>("[^"]*")</string>
+			<key>name</key>
+			<string>string.quoted.double.1с</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(?i:\b(Неопределено|Истина|Ложь|NULL)\b)</string>
 			<key>name</key>
 			<string>constant.language.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=Процедура|Функция)[^\(]*</string>
+			<string>\b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b</string>
 			<key>name</key>
-			<string>entity.name.function.1с</string>
+			<string>constant.numeric.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>("[^"]*")</string>
+			<string>\'.+\'</string>
 			<key>name</key>
-			<string>string.quoted.double.1с</string>
+			<string>constant.other.date.1c</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=Процедура|Функция)[^\(]*</string>
+			<key>name</key>
+			<string>entity.name.function.1с</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -46,6 +58,12 @@
 			<string>(?i:\b(Знач|Экспорт)\b)</string>
 			<key>name</key>
 			<string>storage.modifier.1с</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\#Использовать\b</string>
+			<key>name</key>
+			<string>keyword.control.import.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -97,7 +115,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(;)|(?i:(\b(Перем|Новый)\b))</string>
+			<string>(,|;|\?)|(?i:(\b(Перем|Новый)\b))</string>
 			<key>name</key>
 			<string>keyword.operator.1с</string>
 		</dict>
@@ -106,12 +124,6 @@
 			<string>\b((?&lt;=Знач)[^[,\)=]]*)\b</string>
 			<key>name</key>
 			<string>variable.parameter.1с</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b((\h{8}-(\h{4}-){3}\h{12})|(\d)+)\b</string>
-			<key>name</key>
-			<string>constant.numeric.1с</string>
 		</dict>
 	</array>
 	<key>scopeName</key>

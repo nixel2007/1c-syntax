@@ -1,4 +1,4 @@
-# [PackageDev] target_format: plist, ext: tmLanguage
+﻿# [PackageDev] target_format: plist, ext: tmLanguage
 ---
 name: 1C
 scopeName: source.1с
@@ -9,20 +9,29 @@ patterns:
 - name: comment.line.double-slash.1с
   match: (//.*\n)
 
+- name: string.quoted.double.1с
+  match: ("[^"]*")
+
 - name: constant.language.1с
   match: (?i:\b(Неопределено|Истина|Ложь|NULL)\b)
 
+- name: constant.numeric.1с
+  match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b
+
+- name: constant.other.date.1c
+  match: \'.+\'
+
 - name: entity.name.function.1с
   match: (?<=Процедура|Функция)[^\(]*
-
-- name: string.quoted.double.1с
-  match: ("[^"]*")
 
 - name: storage.type.1с
   match: (?i:\b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b)
 
 - name: storage.modifier.1с
   match: (?i:\b(Знач|Экспорт)\b)
+
+- name: keyword.control.import.1c
+  match: \#Использовать\b
 
 - name: keyword.control.1с
   match: (?i:\b(Прервать|Продолжить|Возврат)\b)
@@ -49,10 +58,7 @@ patterns:
   match: (\+|-|\*|/|%)
 
 - name: keyword.operator.1с
-  match: (;)|(?i:(\b(Перем|Новый)\b))
+  match: (,|;|\?)|(?i:(\b(Перем|Новый)\b))
 
 - name: variable.parameter.1с
   match: \b((?<=Знач)[^[,\)=]]*)\b
-
-- name: constant.numeric.1с
-  match: \b((\h{8}-(\h{4}-){3}\h{12})|(\d)+)\b
