@@ -1,82 +1,82 @@
 ﻿# [PackageDev] target_format: plist, ext: tmLanguage
 ---
 name: 1C
-scopeName: source.1c
+scopeName: source.bsl
 fileTypes: [bsl, os]
 uuid: cf0633ff-beee-424a-a2f7-3dce4093e139
 
 patterns:
-- name: comment.line.double-slash.1c
+- name: comment.line.double-slash.bsl
   match: (//.*\n)
 
-- name: string.quoted.double.1c
+- name: string.quoted.double.bsl
   match: ("[^"]*")
 
-- name: string.interpolated.1c
+- name: string.interpolated.bsl
   begin: \"
   end: \"
   patterns:
   - match: ""
-  - name: constant.character.escape.1c
+  - name: constant.character.escape.bsl
 
 - comment: "Proc and function defenition"
   begin: '(?i:(Процедура|Функция)\s+([a-zа-я0-9_]+)\s*\()'
   beginCaptures:
-    '1': {name: storage.type.1c}
-    '2': {name: entity.name.function.1c}
+    '1': {name: storage.type.bsl}
+    '2': {name: entity.name.function.bsl}
   end: '(?i:\)\s+(Экспорт)?)'
   endCaptures:
-    '1': {name: storage.modifier.1c}
+    '1': {name: storage.modifier.bsl}
   patterns:
   - include: $self
-  - name: storage.modifier.1c
+  - name: storage.modifier.bsl
     match: (?i:\bЗнач\b)
-  - name: invalid.illegal.1c
+  - name: invalid.illegal.bsl
     match: \b((?<==)(?i)[a-zа-я0-9_]*)\b
-  - name: invalid.illegal.1c
+  - name: invalid.illegal.bsl
     match: \b((?<== )(?i)[a-zа-я0-9_]*)\b
-  - name: variable.parameter.1c
+  - name: variable.parameter.bsl
     match: (?i:[a-zа-я0-9_]+)
 
-- name: constant.language.1c
+- name: constant.language.bsl
   match: (?i:\b(Неопределено|Истина|Ложь|NULL)\b)
 
-- name: constant.numeric.1c
+- name: constant.numeric.bsl
   match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b
 
-- name: constant.other.date.1c
+- name: constant.other.date.bsl
   match: \'.+\'
 
-- name: storage.type.1c
+- name: storage.type.bsl
   match: (?i:\b(КонецПроцедуры|КонецФункции)\b)
 
-- name: keyword.control.import.1c
+- name: keyword.control.import.bsl
   match: \#Использовать\b
 
-- name: keyword.control.1c
+- name: keyword.control.bsl
   match: (?i:\b(Прервать|Продолжить|Возврат)\b)
 
-- name: keyword.control.conditional.1c
+- name: keyword.control.conditional.bsl
   match: (?i:\b(Если|Иначе|ИначеЕсли|Тогда|КонецЕсли)\b)
 
-- name: keyword.control.exception.1c
+- name: keyword.control.exception.bsl
   match: (?i:\b(Попытка|Исключение|КонецПопытки|ВызватьИсключение)\b)
 
-- name: keyword.control.repeat.1c
+- name: keyword.control.repeat.bsl
   match: (?i:\b(Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла)\b)
 
-- name: keyword.operator.logical.1c
+- name: keyword.operator.logical.bsl
   match: (?i:\b(НЕ|И|ИЛИ)\b)
 
-- name: keyword.operator.comparison.1c
+- name: keyword.operator.comparison.bsl
   match: <=|>=|=|<|>
 
-- name: keyword.operator.assignment.1c
+- name: keyword.operator.assignment.bsl
   match: (=)
 
-- name: keyword.operator.arithmetic.1c
+- name: keyword.operator.arithmetic.bsl
   match: (\+|-|\*|/|%)
 
-- name: keyword.operator.1c
+- name: keyword.operator.bsl
   match: (,|;|\?)|(?i:(\b(Перем|Новый)\b))
 
