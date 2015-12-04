@@ -20,7 +20,7 @@ patterns:
   - name: constant.character.escape.1c
 
 - comment: "Proc and function defenition"
-  begin: '(?i:(Процедура|Функция)\s+([a-zа-я0-9_]+)\s*\()\s*'
+  begin: '(?i:(Процедура|Функция)\s+([a-zа-я0-9_]+)\s*\()'
   beginCaptures:
     '1': {name: storage.type.1c}
     '2': {name: entity.name.function.1c}
