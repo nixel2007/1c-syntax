@@ -19,6 +19,25 @@ patterns:
   - match: ""
   - name: constant.character.escape.1c
 
+- comment: "Proc and function defenition"
+  begin: '(?i:(Процедура|Функция)\s+([a-zа-я0-9_]+)\s*\()'
+  beginCaptures:
+    '1': {name: storage.type.1c}
+    '2': {name: entity.name.function.1c}
+  end: '(?i:\)\s+(Экспорт)?)'
+  endCaptures:
+    '1': {name: storage.modifier.1с}
+  patterns:
+  - include: $self
+  - name: storage.modifier.1c
+    match: (?i:\bЗнач\b)
+  - name: invalid.illegal.1c
+    match: \b((?<==)(?i)[a-zа-я0-9_]*)\b
+  - name: invalid.illegal.1c
+    match: \b((?<== )(?i)[a-zа-я0-9_]*)\b
+  - name: variable.parameter.1c
+    match: (?i:[a-zа-я0-9_]+)
+
 - name: constant.language.1c
   match: (?i:\b(Неопределено|Истина|Ложь|NULL)\b)
 
@@ -28,14 +47,8 @@ patterns:
 - name: constant.other.date.1c
   match: \'.+\'
 
-- name: entity.name.function.1c
-  match: (?<=Процедура|Функция)[^\(]*
-
 - name: storage.type.1c
-  match: (?i:\b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b)
-
-- name: storage.modifier.1c
-  match: (?i:\b(Знач|Экспорт)\b)
+  match: (?i:\b(КонецПроцедуры|КонецФункции)\b)
 
 - name: keyword.control.import.1c
   match: \#Использовать\b
@@ -67,5 +80,3 @@ patterns:
 - name: keyword.operator.1c
   match: (,|;|\?)|(?i:(\b(Перем|Новый)\b))
 
-- name: variable.parameter.1c
-  match: \b((?<=Знач)[^[,\)=]]*)\b

@@ -43,6 +43,66 @@
 			</array>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>(?i:(Процедура|Функция)\s+([a-zа-я0-9_]+)\s*\()</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.1c</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.1c</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Proc and function defenition</string>
+			<key>end</key>
+			<string>(?i:\)\s+(Экспорт)?)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.modifier.1с</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i:\bЗнач\b)</string>
+					<key>name</key>
+					<string>storage.modifier.1c</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b((?&lt;==)(?i)[a-zа-я0-9_]*)\b</string>
+					<key>name</key>
+					<string>invalid.illegal.1c</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b((?&lt;== )(?i)[a-zа-я0-9_]*)\b</string>
+					<key>name</key>
+					<string>invalid.illegal.1c</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i:[a-zа-я0-9_]+)</string>
+					<key>name</key>
+					<string>variable.parameter.1c</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>(?i:\b(Неопределено|Истина|Ложь|NULL)\b)</string>
 			<key>name</key>
@@ -62,21 +122,9 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=Процедура|Функция)[^\(]*</string>
-			<key>name</key>
-			<string>entity.name.function.1c</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i:\b(Процедура|Функция|КонецПроцедуры|КонецФункции)\b)</string>
+			<string>(?i:\b(КонецПроцедуры|КонецФункции)\b)</string>
 			<key>name</key>
 			<string>storage.type.1c</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i:\b(Знач|Экспорт)\b)</string>
-			<key>name</key>
-			<string>storage.modifier.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -137,12 +185,6 @@
 			<string>(,|;|\?)|(?i:(\b(Перем|Новый)\b))</string>
 			<key>name</key>
 			<string>keyword.operator.1c</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b((?&lt;=Знач)[^[,\)=]]*)\b</string>
-			<key>name</key>
-			<string>variable.parameter.1c</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
