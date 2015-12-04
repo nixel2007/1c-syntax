@@ -84,6 +84,12 @@
 				</dict>
 				<dict>
 					<key>match</key>
+					<string>\b((?&lt;==)(?i)[a-zа-я0-9_]*)\b</string>
+					<key>name</key>
+					<string>invalid.illegal.1c</string>
+				</dict>
+				<dict>
+					<key>match</key>
 					<string>\b((?&lt;== )(?i)[a-zа-я0-9_]*)\b</string>
 					<key>name</key>
 					<string>invalid.illegal.1c</string>
