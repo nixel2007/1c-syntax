@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>1s</string>
+		<string>os</string>
+	</array>
+	<key>foldingStartMarker</key>
+	<string>^(if|while|for|Функция|Процедура|Если|Пока|Для)</string>
+	<key>foldingStopMarker</key>
+	<string>(enddo|endif|КонецФункции|КонецПроцедуры|КонецЕсли|КонецЦикла)$</string>
+
+	<key>name</key>
+	<string>onescript</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.onescript</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>1S embedded functions</string>
+			<key>match</key>
+			<string>(^|\s)(?i:(ACos|ACos|ASin|ASin|ATan|ATan|Cos|Cos|Exp|Exp|Log|Log|Log10|Log10|Pow|Pow|Sin|Sin|Sqrt|Sqrt|Tan|Tan|Булево|Boolean|ВРег|Upper|Вычислить|Eval|Год|Year|Дата|Date|День|Day|ДеньГода|DayOfYear|ДеньНедели|WeekDay|ДобавитьМесяц|AddMonth|ИнформацияОбОшибке|ErrorInfo|КодСимвола|CharCode|КонецГода|EndOfYear|КонецДня|EndOfDay|КонецКвартала|EndOfQuarter|КонецМесяца|EndOfMonth|КонецМинуты|EndOfMinute|КонецНедели|EndOfWeek|КонецЧаса|EndOfHour|Лев|Left|Макс|Max|Месяц|Month|Мин|Min|Минута|Minute|Найти|Find|НачалоГода|BegOfYear|НачалоДня|BegOfDay|НачалоКвартала|BegOfQuarter|НачалоМесяца|BegOfMonth|НачалоМинуты|BegOfMinute|НачалоНедели|BegOfWeek|НачалоЧаса|BegOfHour|НеделяГода|WeekOfYear|НРег|Lower|Окр|Round|ОписаниеОшибки|ErrorDescription|Прав|Right|ПустаяСтрока|IsBlankString|Секунда|Second|Символ|Char|СокрЛ|TrimL|СокрЛП|TrimAll|СокрП|TrimR|Сред|Mid|СтрДлина|StrLen|СтрЗаменить|StrReplace|Строка|String|СтрПолучитьСтроку|StrGetLine|СтрЧислоВхождений|StrOccurrenceCount|СтрЧислоСтрок|StrLineCount|ТекущаяДата|CurrentDate|Тип|Type|ТипЗнч|TypeOf|ТРег|Title|Формат|Format|Цел|Int|Час|Hour|Число|Number))\s*\(</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.onescript</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>1S operators</string>
+			<key>match</key>
+			<string>(?i)\b(Перем|Новый|ВызватьИсключение|Экспорт|Не|И|Или)\b</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>control keywords</string>
+			<key>match</key>
+			<string>(?i:\b(Если|Тогда|Иначе|ИначеЕсли|КонецЕсли|Пока|Цикл|КонецЦикла|Для|По|каждого|Из|Знач|Возврат|Перейти|Продолжить|Прервать|Попытка|Исключение|КонецПопытки|Выполнить)\b)</string>
+			<key>name</key>
+			<string>keyword.control.onescript</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>1S primitives</string>
+			<key>match</key>
+			<string>(?i:\s*\b(Истина|Ложь|Число|Строка|Дата|Неопределено|Знач)\b\s*)</string>
+			<key>name</key>
+			<string>support.type.onescript</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>String constant</string>
+			<key>match</key>
+			<string>\"(.*?)\"</string>
+			<key>name</key>
+			<string>string.quoted.other.onescript</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Comment</string>
+			<key>match</key>
+			<string>\/\/.*</string>
+			<key>name</key>
+			<string>comment.line.double-slash.onescript</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.function.onescript</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.onescript</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.onescript</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Method definitions</string>
+			<key>match</key>
+			<string>((?i:Функция|Процедура))\s*([a-zA-Zа-яА-Я_]\w*)\s*(\()([^)]*)(\))</string>
+			<key>name</key>
+			<string>support.function.onescript</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Method endings</string>
+			<key>match</key>
+			<string>(?i:КонецФункции|КонецПроцедуры)</string>
+			<key>name</key>
+			<string>support.function.onescript</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\"</string>
+			<key>comment</key>
+			<string>Multiline string</string>
+			<key>end</key>
+			<string>\"</string>
+			<key>name</key>
+			<string>string.other.onescript</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Compilation directives</string>
+			<key>match</key>
+			<string>(?i:&amp;(НаКлиенте|НаСервере|НаСервереБезКонтекста|НаКлиентеНаСервереБезКонтекста|НаКлиентеНаСервере))</string>
+			<key>name</key>
+			<string>support.function.onescript</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Preprocessor instructions</string>
+			<key>match</key>
+			<string>(?i:#(Если|ИначеЕсли|Иначе|КонецЕсли).*(Тогда)?)</string>
+			<key>name</key>
+			<string>support.function.onescript</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.onescript</string>
+	<key>uuid</key>
+	<string>20899025-07ca-41f4-a7e2-c124b1474c10</string>
+</dict>
+</plist>
