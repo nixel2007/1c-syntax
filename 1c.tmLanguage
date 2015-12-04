@@ -61,7 +61,15 @@
 			<key>comment</key>
 			<string>Proc and function defenition</string>
 			<key>end</key>
-			<string>\)</string>
+			<string>(?i:\)\s+(Экспорт)?)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.modifier.1с</string>
+				</dict>
+			</dict>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -70,7 +78,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i:\b(Знач|Экспорт)\b)</string>
+					<string>(?i:\bЗнач\b)</string>
 					<key>name</key>
 					<string>storage.modifier.1c</string>
 				</dict>
@@ -105,12 +113,6 @@
 			<string>(?i:\b(КонецПроцедуры|КонецФункции)\b)</string>
 			<key>name</key>
 			<string>storage.type.1c</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i:\b(Экспорт)\b)</string>
-			<key>name</key>
-			<string>storage.modifier.1c</string>
 		</dict>
 		<dict>
 			<key>match</key>

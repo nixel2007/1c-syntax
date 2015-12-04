@@ -24,11 +24,13 @@ patterns:
   beginCaptures:
     '1': {name: storage.type.1c}
     '2': {name: entity.name.function.1c}
-  end: \)
+  end: '(?i:\)\s+(Экспорт)?)'
+  endCaptures:
+    '1': {name: storage.modifier.1с}
   patterns:
   - include: $self
   - name: storage.modifier.1c
-    match: (?i:\b(Знач|Экспорт)\b)
+    match: (?i:\bЗнач\b)
   - name: variable.parameter.1c
     match: (?i:[a-zа-я0-9_]+)
 
@@ -43,9 +45,6 @@ patterns:
 
 - name: storage.type.1c
   match: (?i:\b(КонецПроцедуры|КонецФункции)\b)
-
-- name: storage.modifier.1c
-  match: (?i:\b(Экспорт)\b)
 
 - name: keyword.control.import.1c
   match: \#Использовать\b
