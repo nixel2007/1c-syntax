@@ -26,7 +26,7 @@ patterns:
     '2': {name: entity.name.function.1c}
   end: '(?i:\)\s+(Экспорт)?)'
   endCaptures:
-    '1': {name: storage.modifier.1с}
+    '1': {name: storage.modifier.1c}
   patterns:
   - include: $self
   - name: storage.modifier.1c
