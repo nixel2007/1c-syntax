@@ -1,4 +1,4 @@
-﻿# [PackageDev] target_format: plist, ext: tmLanguage
+# [PackageDev] target_format: plist, ext: tmLanguage
 ---
 name: 1C
 scopeName: source.bsl
