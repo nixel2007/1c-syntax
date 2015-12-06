@@ -86,5 +86,5 @@ patterns:
 - name: storage.modifier.bsl
   match: (?i:&(НаКлиенте|НаСервере|НаСервереБезКонтекста|НаКлиентеНаСервереБезКонтекста|НаКлиентеНаСервере))
 
-- name: support.function.bsl
+- name: meta.preprocessor.bsl
   match: (?i:#(Если|ИначеЕсли|Иначе|КонецЕсли).*(Тогда)?)

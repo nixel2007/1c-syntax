@@ -202,7 +202,7 @@
 			<key>match</key>
 			<string>(?i:#(Если|ИначеЕсли|Иначе|КонецЕсли).*(Тогда)?)</string>
 			<key>name</key>
-			<string>support.function.bsl</string>
+			<string>meta.preprocessor.bsl</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
