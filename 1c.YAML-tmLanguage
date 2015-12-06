@@ -6,85 +6,86 @@ fileTypes: [bsl, os]
 uuid: cf0633ff-beee-424a-a2f7-3dce4093e139
 
 patterns:
-- name: comment.line.double-slash.bsl
-  match: (//.*\n)
 
-- name: string.quoted.double.bsl
-  match: ("[^"]*")
+  - name: comment.line.double-slash.bsl
+    match: (//.*\n)
 
-- name: string.interpolated.bsl
-  begin: \"
-  end: \"
-  patterns:
-  - match: ""
-  - name: constant.character.escape.bsl
+  - name: string.quoted.double.bsl
+    match: ("[^"]*")
 
-- comment: "Proc and function defenition"
-  begin: '(?i:(Процедура|Функция)\s+([a-zа-я0-9_]+)\s*\()'
-  beginCaptures:
-    '1': {name: storage.type.bsl}
-    '2': {name: entity.name.function.bsl}
-  end: '(?i:\)\s+(Экспорт)?)'
-  endCaptures:
-    '1': {name: storage.modifier.bsl}
-  patterns:
-  - include: $self
+  - name: string.interpolated.bsl
+    begin: \"
+    end: \"
+    patterns:
+    - match: ""
+    - name: constant.character.escape.bsl
+
+  - comment: "Proc and function defenition"
+    begin: '(?i:(Процедура|Функция)\s+([a-zа-я0-9_]+)\s*\()'
+    beginCaptures:
+      '1': {name: storage.type.bsl}
+      '2': {name: entity.name.function.bsl}
+    end: '(?i:\)\s+(Экспорт)?)'
+    endCaptures:
+      '1': {name: storage.modifier.bsl}
+    patterns:
+    - include: $self
+    - name: storage.modifier.bsl
+      match: (?i:\bЗнач\b)
+    - name: invalid.illegal.bsl
+      match: \b((?<==)(?i)[a-zа-я0-9_]*)\b
+    - name: invalid.illegal.bsl
+      match: \b((?<== )(?i)[a-zа-я0-9_]*)\b
+    - name: variable.parameter.bsl
+      match: (?i:[a-zа-я0-9_]+)
+
+  - name: constant.language.bsl
+    match: (?i:\b(Неопределено|Истина|Ложь|NULL)\b)
+
+  - name: constant.numeric.bsl
+    match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b
+
+  - name: constant.other.date.bsl
+    match: \'.+\'
+
+  - name: storage.type.bsl
+    match: (?i:\b(КонецПроцедуры|КонецФункции)\b)
+
+  - name: keyword.control.import.bsl
+    match: \#Использовать\b
+
+  - name: keyword.control.bsl
+    match: (?i:\b(Прервать|Продолжить|Возврат)\b)
+
+  - name: keyword.control.conditional.bsl
+    match: (?i:\b(Если|Иначе|ИначеЕсли|Тогда|КонецЕсли)\b)
+
+  - name: keyword.control.exception.bsl
+    match: (?i:\b(Попытка|Исключение|КонецПопытки|ВызватьИсключение)\b)
+
+  - name: keyword.control.repeat.bsl
+    match: (?i:\b(Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла)\b)
+
+  - name: keyword.operator.logical.bsl
+    match: (?i:\b(НЕ|И|ИЛИ)\b)
+
+  - name: keyword.operator.comparison.bsl
+    match: <=|>=|=|<|>
+
+  - name: keyword.operator.assignment.bsl
+    match: (=)
+
+  - name: keyword.operator.arithmetic.bsl
+    match: (\+|-|\*|/|%)
+
+  - name: keyword.operator.bsl
+    match: (,|;|\?)|(?i:(\b(Перем|Новый)\b))
+
+  - name: support.function.bsl
+    match: (^|\s)(?i:(ACos|ACos|ASin|ASin|ATan|ATan|Cos|Cos|Exp|Exp|Log|Log|Log10|Log10|Pow|Pow|Sin|Sin|Sqrt|Sqrt|Tan|Tan|Булево|Boolean|ВРег|Upper|Вычислить|Eval|Выполнить|Execute|Год|Year|Дата|Date|День|Day|ДеньГода|DayOfYear|ДеньНедели|WeekDay|ДобавитьМесяц|AddMonth|ИнформацияОбОшибке|ErrorInfo|КодСимвола|CharCode|КонецГода|EndOfYear|КонецДня|EndOfDay|КонецКвартала|EndOfQuarter|КонецМесяца|EndOfMonth|КонецМинуты|EndOfMinute|КонецНедели|EndOfWeek|КонецЧаса|EndOfHour|Лев|Left|Макс|Max|Месяц|Month|Мин|Min|Минута|Minute|Найти|Find|НачалоГода|BegOfYear|НачалоДня|BegOfDay|НачалоКвартала|BegOfQuarter|НачалоМесяца|BegOfMonth|НачалоМинуты|BegOfMinute|НачалоНедели|BegOfWeek|НачалоЧаса|BegOfHour|НеделяГода|WeekOfYear|НРег|Lower|Окр|Round|ОписаниеОшибки|ErrorDescription|Прав|Right|ПустаяСтрока|IsBlankString|Секунда|Second|Символ|Char|СокрЛ|TrimL|СокрЛП|TrimAll|СокрП|TrimR|Сред|Mid|СтрДлина|StrLen|СтрЗаменить|StrReplace|Строка|String|СтрПолучитьСтроку|StrGetLine|СтрЧислоВхождений|StrOccurrenceCount|СтрЧислоСтрок|StrLineCount|ТекущаяДата|CurrentDate|Тип|Type|ТипЗнч|TypeOf|ТРег|Title|Формат|Format|Цел|Int|Час|Hour|Число|Number))\s*\(
+
   - name: storage.modifier.bsl
-    match: (?i:\bЗнач\b)
-  - name: invalid.illegal.bsl
-    match: \b((?<==)(?i)[a-zа-я0-9_]*)\b
-  - name: invalid.illegal.bsl
-    match: \b((?<== )(?i)[a-zа-я0-9_]*)\b
-  - name: variable.parameter.bsl
-    match: (?i:[a-zа-я0-9_]+)
+    match: (?i:&(НаКлиенте|НаСервере|НаСервереБезКонтекста|НаКлиентеНаСервереБезКонтекста|НаКлиентеНаСервере))
 
-- name: constant.language.bsl
-  match: (?i:\b(Неопределено|Истина|Ложь|NULL)\b)
-
-- name: constant.numeric.bsl
-  match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b
-
-- name: constant.other.date.bsl
-  match: \'.+\'
-
-- name: storage.type.bsl
-  match: (?i:\b(КонецПроцедуры|КонецФункции)\b)
-
-- name: keyword.control.import.bsl
-  match: \#Использовать\b
-
-- name: keyword.control.bsl
-  match: (?i:\b(Прервать|Продолжить|Возврат)\b)
-
-- name: keyword.control.conditional.bsl
-  match: (?i:\b(Если|Иначе|ИначеЕсли|Тогда|КонецЕсли)\b)
-
-- name: keyword.control.exception.bsl
-  match: (?i:\b(Попытка|Исключение|КонецПопытки|ВызватьИсключение)\b)
-
-- name: keyword.control.repeat.bsl
-  match: (?i:\b(Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла)\b)
-
-- name: keyword.operator.logical.bsl
-  match: (?i:\b(НЕ|И|ИЛИ)\b)
-
-- name: keyword.operator.comparison.bsl
-  match: <=|>=|=|<|>
-
-- name: keyword.operator.assignment.bsl
-  match: (=)
-
-- name: keyword.operator.arithmetic.bsl
-  match: (\+|-|\*|/|%)
-
-- name: keyword.operator.bsl
-  match: (,|;|\?)|(?i:(\b(Перем|Новый)\b))
-
-- name: support.function.bsl
-  match: (^|\s)(?i:(ACos|ACos|ASin|ASin|ATan|ATan|Cos|Cos|Exp|Exp|Log|Log|Log10|Log10|Pow|Pow|Sin|Sin|Sqrt|Sqrt|Tan|Tan|Булево|Boolean|ВРег|Upper|Вычислить|Eval|Выполнить|Execute|Год|Year|Дата|Date|День|Day|ДеньГода|DayOfYear|ДеньНедели|WeekDay|ДобавитьМесяц|AddMonth|ИнформацияОбОшибке|ErrorInfo|КодСимвола|CharCode|КонецГода|EndOfYear|КонецДня|EndOfDay|КонецКвартала|EndOfQuarter|КонецМесяца|EndOfMonth|КонецМинуты|EndOfMinute|КонецНедели|EndOfWeek|КонецЧаса|EndOfHour|Лев|Left|Макс|Max|Месяц|Month|Мин|Min|Минута|Minute|Найти|Find|НачалоГода|BegOfYear|НачалоДня|BegOfDay|НачалоКвартала|BegOfQuarter|НачалоМесяца|BegOfMonth|НачалоМинуты|BegOfMinute|НачалоНедели|BegOfWeek|НачалоЧаса|BegOfHour|НеделяГода|WeekOfYear|НРег|Lower|Окр|Round|ОписаниеОшибки|ErrorDescription|Прав|Right|ПустаяСтрока|IsBlankString|Секунда|Second|Символ|Char|СокрЛ|TrimL|СокрЛП|TrimAll|СокрП|TrimR|Сред|Mid|СтрДлина|StrLen|СтрЗаменить|StrReplace|Строка|String|СтрПолучитьСтроку|StrGetLine|СтрЧислоВхождений|StrOccurrenceCount|СтрЧислоСтрок|StrLineCount|ТекущаяДата|CurrentDate|Тип|Type|ТипЗнч|TypeOf|ТРег|Title|Формат|Format|Цел|Int|Час|Hour|Число|Number))\s*\(
-
-- name: storage.modifier.bsl
-  match: (?i:&(НаКлиенте|НаСервере|НаСервереБезКонтекста|НаКлиентеНаСервереБезКонтекста|НаКлиентеНаСервере))
-
-- name: meta.preprocessor.bsl
-  match: (?i:#(Если|ИначеЕсли|Иначе|КонецЕсли).*(Тогда)?)
+  - name: meta.preprocessor.bsl
+    match: (?i:#(Если|ИначеЕсли|Иначе|КонецЕсли).*(Тогда)?)
