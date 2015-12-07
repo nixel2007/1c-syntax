@@ -13,7 +13,7 @@
 	],
 	"tasks": [
 		{
-			"taskName": "Compile bsl(1С)",
+			"taskName": "ONESCRIPT: compile",
 			"args": [
 				"-compile",
 				"${file}"
@@ -24,7 +24,7 @@
 			"isBuildCommand": false
 		},
 		{
-			"taskName": "Run bsl(1С)",
+			"taskName": "ONESCRIPT: run",
 			"args": [
 				"${file}"
 			],
