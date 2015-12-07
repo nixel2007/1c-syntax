@@ -1,6 +1,6 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
 ---
-name: 1C
+name: 1C (BSL)
 scopeName: source.bsl
 fileTypes: [bsl, os]
 uuid: cf0633ff-beee-424a-a2f7-3dce4093e139
