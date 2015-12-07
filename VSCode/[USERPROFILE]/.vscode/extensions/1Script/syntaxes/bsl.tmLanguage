@@ -8,20 +8,20 @@
 		<string>os</string>
 	</array>
 	<key>name</key>
-	<string>onescript</string>
+	<string>1C (BSL)</string>
 	<key>patterns</key>
 	<array>
 		<dict>
 			<key>match</key>
 			<string>(//.*\n)</string>
 			<key>name</key>
-			<string>comment.line.double-slash.1c</string>
+			<string>comment.line.double-slash.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>("[^"]*")</string>
 			<key>name</key>
-			<string>string.quoted.double.1c</string>
+			<string>string.quoted.double.bsl</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -29,7 +29,7 @@
 			<key>end</key>
 			<string>\"</string>
 			<key>name</key>
-			<string>string.interpolated.1c</string>
+			<string>string.interpolated.bsl</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -38,7 +38,7 @@
 				</dict>
 				<dict>
 					<key>name</key>
-					<string>constant.character.escape.1c</string>
+					<string>constant.character.escape.bsl</string>
 				</dict>
 			</array>
 		</dict>
@@ -50,12 +50,12 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.1c</string>
+					<string>storage.type.bsl</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.1c</string>
+					<string>entity.name.function.bsl</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -67,7 +67,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>storage.modifier.1с</string>
+					<string>storage.modifier.bsl</string>
 				</dict>
 			</dict>
 			<key>patterns</key>
@@ -80,25 +80,25 @@
 					<key>match</key>
 					<string>(?i:\bЗнач\b)</string>
 					<key>name</key>
-					<string>storage.modifier.1c</string>
+					<string>storage.modifier.bsl</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>\b((?&lt;==)(?i)[a-zа-я0-9_]*)\b</string>
 					<key>name</key>
-					<string>invalid.illegal.1c</string>
+					<string>invalid.illegal.bsl</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>\b((?&lt;== )(?i)[a-zа-я0-9_]*)\b</string>
 					<key>name</key>
-					<string>invalid.illegal.1c</string>
+					<string>invalid.illegal.bsl</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i:[a-zа-я0-9_]+)</string>
 					<key>name</key>
-					<string>variable.parameter.1c</string>
+					<string>variable.parameter.bsl</string>
 				</dict>
 			</array>
 		</dict>
@@ -106,90 +106,108 @@
 			<key>match</key>
 			<string>(?i:\b(Неопределено|Истина|Ложь|NULL)\b)</string>
 			<key>name</key>
-			<string>constant.language.1c</string>
+			<string>constant.language.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b</string>
 			<key>name</key>
-			<string>constant.numeric.1c</string>
+			<string>constant.numeric.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\'.+\'</string>
 			<key>name</key>
-			<string>constant.other.date.1c</string>
+			<string>constant.other.date.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i:\b(КонецПроцедуры|КонецФункции)\b)</string>
 			<key>name</key>
-			<string>storage.type.1c</string>
+			<string>storage.type.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\#Использовать\b</string>
 			<key>name</key>
-			<string>keyword.control.import.1c</string>
+			<string>keyword.control.import.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i:\b(Прервать|Продолжить|Возврат)\b)</string>
 			<key>name</key>
-			<string>keyword.control.1c</string>
+			<string>keyword.control.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i:\b(Если|Иначе|ИначеЕсли|Тогда|КонецЕсли)\b)</string>
 			<key>name</key>
-			<string>keyword.control.conditional.1c</string>
+			<string>keyword.control.conditional.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i:\b(Попытка|Исключение|КонецПопытки|ВызватьИсключение)\b)</string>
 			<key>name</key>
-			<string>keyword.control.exception.1c</string>
+			<string>keyword.control.exception.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i:\b(Пока|Для (Каждого)?|Из|По|Цикл|КонецЦикла)\b)</string>
 			<key>name</key>
-			<string>keyword.control.repeat.1c</string>
+			<string>keyword.control.repeat.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i:\b(НЕ|И|ИЛИ)\b)</string>
 			<key>name</key>
-			<string>keyword.operator.logical.1c</string>
+			<string>keyword.operator.logical.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>&lt;=|&gt;=|=|&lt;|&gt;</string>
 			<key>name</key>
-			<string>keyword.operator.comparison.1c</string>
+			<string>keyword.operator.comparison.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(=)</string>
 			<key>name</key>
-			<string>keyword.operator.assignment.1c</string>
+			<string>keyword.operator.assignment.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(\+|-|\*|/|%)</string>
 			<key>name</key>
-			<string>keyword.operator.arithmetic.1c</string>
+			<string>keyword.operator.arithmetic.bsl</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(,|;|\?)|(?i:(\b(Перем|Новый)\b))</string>
 			<key>name</key>
-			<string>keyword.operator.1c</string>
+			<string>keyword.operator.bsl</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(^|\s)(?i:(ACos|ACos|ASin|ASin|ATan|ATan|Cos|Cos|Exp|Exp|Log|Log|Log10|Log10|Pow|Pow|Sin|Sin|Sqrt|Sqrt|Tan|Tan|Булево|Boolean|ВРег|Upper|Вычислить|Eval|Выполнить|Execute|Год|Year|Дата|Date|День|Day|ДеньГода|DayOfYear|ДеньНедели|WeekDay|ДобавитьМесяц|AddMonth|ИнформацияОбОшибке|ErrorInfo|КодСимвола|CharCode|КонецГода|EndOfYear|КонецДня|EndOfDay|КонецКвартала|EndOfQuarter|КонецМесяца|EndOfMonth|КонецМинуты|EndOfMinute|КонецНедели|EndOfWeek|КонецЧаса|EndOfHour|Лев|Left|Макс|Max|Месяц|Month|Мин|Min|Минута|Minute|Найти|Find|НачалоГода|BegOfYear|НачалоДня|BegOfDay|НачалоКвартала|BegOfQuarter|НачалоМесяца|BegOfMonth|НачалоМинуты|BegOfMinute|НачалоНедели|BegOfWeek|НачалоЧаса|BegOfHour|НеделяГода|WeekOfYear|НРег|Lower|Окр|Round|ОписаниеОшибки|ErrorDescription|Прав|Right|ПустаяСтрока|IsBlankString|Секунда|Second|Символ|Char|СокрЛ|TrimL|СокрЛП|TrimAll|СокрП|TrimR|Сред|Mid|СтрДлина|StrLen|СтрЗаменить|StrReplace|Строка|String|СтрПолучитьСтроку|StrGetLine|СтрЧислоВхождений|StrOccurrenceCount|СтрЧислоСтрок|StrLineCount|ТекущаяДата|CurrentDate|Тип|Type|ТипЗнч|TypeOf|ТРег|Title|Формат|Format|Цел|Int|Час|Hour|Число|Number))\s*\(</string>
+			<key>name</key>
+			<string>support.function.bsl</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:&amp;(НаКлиенте|НаСервере|НаСервереБезКонтекста|НаКлиентеНаСервереБезКонтекста|НаКлиентеНаСервере))</string>
+			<key>name</key>
+			<string>storage.modifier.bsl</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:#(Если|ИначеЕсли|Иначе|КонецЕсли).*(Тогда)?)</string>
+			<key>name</key>
+			<string>meta.preprocessor.bsl</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.1c</string>
+	<string>source.bsl</string>
 	<key>uuid</key>
-	<string>cf0633ff-beee-424a-a2f7-3dce4093e139</string>
+	<string>ff0633ff-beee-424a-a2f7-3dce4093e139</string>
 </dict>
 </plist>

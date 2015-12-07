@@ -13,7 +13,7 @@
 	],
 	"tasks": [
 		{
-			"taskName": "Compile",
+			"taskName": "Compile bsl(1С)",
 			"args": [
 				"-compile",
 				"${file}"
@@ -24,7 +24,7 @@
 			"isBuildCommand": false
 		},
 		{
-			"taskName": "Run",
+			"taskName": "Run bsl(1С)",
 			"args": [
 				"${file}"
 			],
@@ -35,7 +35,7 @@
 			"problemMatcher": {
 				"fileLocation": "absolute",
 				"pattern": {
- 			"regexp": "^{Модуль\\s+(.*)\\s\\/\\s.*:\\s+(\\d+)\\s+\\/\\s+(.*)}$",		
+ 			"regexp": "^{Модуль\\s+(.*)\\s\\/\\s.*:\\s+(\\d+)\\s+\\/\\s+(.*)}$",
 					"file": 1,
 					//"line": 2,
 					"location": 2,
