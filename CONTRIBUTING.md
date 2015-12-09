@@ -140,7 +140,7 @@ npm install -g vsce
 [vsc-language-1c-bsl] git push
 [vsc-language-1c-bsl] git tag "v<version>"
 [vsc-language-1c-bsl] git push origin "v<version>"
-[vsc-language-1c-bsl] vsc-language-1c-bsle publish
+[vsc-language-1c-bsl] vsce publish
 
 [atom-language-1c-bsl] apm publish <version>
 ```
