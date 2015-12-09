@@ -11,7 +11,10 @@ Syntax defenition rules for 1C:Enterprise 8 for tmLanguage-based text editors
 * имя пакетов, устанавливаемых через пакетные менеджеры - `language-1c-bsl`
 * пользовательское имя языка, отображаемого при выборе синтаксиса - `1C (BSL)`
 
-Репозитории пакетов для редакторов:
-* [Sublime text](https://github.com/xDrivenDevelopment/sublime-language-1c-bsl)
-* [Atom](https://github.com/xDrivenDevelopment/atom-language-1c-bsl)
-* [VSC](https://github.com/xDrivenDevelopment/vsc-language-1c-bsl)
+Ссылки:
+
+| Репозиторий | Пакет |
+|:---:|:---:|
+| [Sublime Text](https://github.com/xDrivenDevelopment/sublime-language-1c-bsl) | [Package control](https://packagecontrol.io/packages/Language%201C%20(BSL)) |
+| [Atom](https://github.com/xDrivenDevelopment/atom-language-1c-bsl) | [Atom.io/packages](https://atom.io/packages/language-1c-bsl) |
+| [VSC](https://github.com/xDrivenDevelopment/vsc-language-1c-bsl) | [Marketplace](https://marketplace.visualstudio.com/items/xDrivenDevelopment.language-1c-bsl) |
