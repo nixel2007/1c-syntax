@@ -1,8 +1,8 @@
 ## Документация по редакторам
 
 * Sublime text - http://www.sublimetext.com/docs/3
-* atom-language-1c-bsl - https://atom-language-1c-bsl.io/docs
-* vsc-language-1c-bsl - https://code.visualsublime--language-1c-bsludio.com/Docs
+* Atom - https://atom.io/docs
+* VSC - https://code.visualstudio.com/Docs
 
 ## Разработка грамматик
 
