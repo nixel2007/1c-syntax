@@ -6,7 +6,22 @@
 
 ## Разработка грамматик
 
-ToDo
+* Описание формата грамматик (примеры в JSON): http://manual.macromates.com/en/language_grammars
+* Описание формирования файла YAML, работа с пакетом `AAAPackageDev`: http://docs.sublimetext.info/en/latest/extensibility/syntaxdefs.html
+
+*Рекомендация*:  
+На данный момент разработку грамматик рекомендуется вести в редакторе Sublime Text.
+
+** Важно: **  
+Если вашем редакторе установлен пакет `language-1c-bsl`, необходимо его деактивировать или удалить через пакетный менеджер.  
+
+### Редактирование в Sublime Text
+* Установите пакет `AAAPackageDev` через пакетный менеджер
+* Склонируйте репозиторий `1c-syntax` в папку `%AppData%\Roaming\Sublime Text 3\Packages\1c-syntax`
+* Убедитесь, что подсветка 1С-синтаксиса заработала
+* Откройте файл `1c.YAML-tmLanguage` и внесите свои изменения
+* Выполните команду `Tools` -> `Build` (Ctrl + b). Если появится окно `Convert to ...`, выберите верхний вариант `Convert to ...`. Внизу должно открыться окно с информацией и текстом `No target format specified, searching in file... Property List`. Если вы допустили ошибку в файле YAML, то ошибка будет отражена там же.
+* Изменения синтаксиса должны примениться автоматически. Если этого не произошло, попробуйте переоткрыть редактор
 
 ## Разработка пакетов
 
@@ -35,4 +50,6 @@ ToDo
 [vsc-language-1c-bsl] vsc-language-1c-bsle publish
 
 [atom-language-1c-bsl] apm publish <version>
+[atom-language-1c-bsl] git tag "v<version>"
+[atom-language-1c-bsl] git push origin "v<version>"
 ```
