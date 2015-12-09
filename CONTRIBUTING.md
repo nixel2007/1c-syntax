@@ -109,6 +109,19 @@ Sublime Text.
 
 ## Сборка пакетов
 
+Для публикации пакетов на [Marketplace VSC](https://marketplace.visualstudio.com/#VSCode) должна
+быть установлена утилита публикации `vsce`. Утилиту можно поставить командой
+```
+npm install -g vsce
+```
+Так же вам понадобится Personal Access Token. Настройка утилиты `vsce` описана
+[здесь](https://code.visualstudio.com/docs/tools/vscecli), разделы
+"Get a Personal Access Token" и "Login to a Publisher". Используемое имя
+"Publisher" - `xDrivenDevelopment`.
+
+Утилита публикации пакетов на [Atom.io/packages](https://atom.io/packages) при
+первом использовании запросит логин и пароль от GitHub.
+
 Репозитории-подпапки `1с-syntax`, `atom-language-1c-bsl`, `sublime-language-1c-bsl` и `vsc-language-1c-bsl` должны располагаться в одной папке.
 В квадратных скобках указано откуда надо выполнять команды.
 
