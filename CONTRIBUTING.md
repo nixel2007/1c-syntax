@@ -35,6 +35,4 @@ ToDo
 [vsc-language-1c-bsl] vsc-language-1c-bsle publish
 
 [atom-language-1c-bsl] apm publish <version>
-[atom-language-1c-bsl] git tag "v<version>"
-[atom-language-1c-bsl] git push origin "v<version>"
 ```
