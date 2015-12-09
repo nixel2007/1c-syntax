@@ -22,6 +22,7 @@
 * Откройте файл `1c.YAML-tmLanguage` и внесите свои изменения
 * Выполните команду `Tools` -> `Build` (Ctrl + b). Если появится окно `Convert to ...`, выберите верхний вариант `Convert to ...`. Внизу должно открыться окно с информацией и текстом `No target format specified, searching in file... Property List`. Если вы допустили ошибку в файле YAML, то ошибка будет отражена там же.
 * Изменения синтаксиса должны примениться автоматически. Если этого не произошло, попробуйте переоткрыть редактор
+* Сделайте коммит и отправьте изменения файла `1c.YAML-tmLanguage` в основной репозиторий `1c-syntax`
 
 ## Разработка пакетов
 
@@ -50,6 +51,4 @@ ToDo
 [vsc-language-1c-bsl] vsc-language-1c-bsle publish
 
 [atom-language-1c-bsl] apm publish <version>
-[atom-language-1c-bsl] git tag "v<version>"
-[atom-language-1c-bsl] git push origin "v<version>"
 ```
