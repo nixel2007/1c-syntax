@@ -82,7 +82,7 @@ ToDo
 
 #### Sublime Text
 * Склонируйте репозиторий `sublime-language-1c-bsl` в папку
-  `%AppData%\Roaming\Sublime Text 3\Packages\sublime-language-1c-bsl`
+  `%AppData%\Sublime Text 3\Packages\sublime-language-1c-bsl`
 
 Средства отладки на официальном сайте не обозначены :)  
 Попробуйте использовать внешние пакеты, например, [Plugin Debugger](https://packagecontrol.io/packages/Plugin%20Debugger).
