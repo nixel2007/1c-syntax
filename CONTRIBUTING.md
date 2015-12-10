@@ -70,7 +70,7 @@ ToDo
   * Официальная https://www.sublimetext.com/docs/3/packages.html
   * Неофициальная, с примерами
     http://code.tutsplus.com/tutorials/how-to-create-a-sublime-text-2-plugin--net-22685
-* Atom - https://atom.io/docs/v1.2.4/hacking-atom-package-word-count
+* Atom - https://atom.io/docs/latest/hacking-atom-package-word-count
 * VSC - https://code.visualstudio.com/docs/extensions/overview
 
 ### Настройка окружения для разработки
@@ -94,7 +94,7 @@ ToDo
 * Откройте папку репозитория в Atom.
 
 Подробную информацию об отладке можно найти в
-[документации](https://atom.io/docs/v1.2.4/hacking-atom-debugging).
+[документации](https://atom.io/docs/latest/hacking-atom-debugging).
 
 После внесения изменений в исходный код модуля, отлаживаемое приложение можно
 перезапустить нажатием `Ctrl-Alt-R` или нажать соответствующую кнопку в панели
@@ -106,7 +106,7 @@ ToDo
 * Откройте папку репозитория в VSC.
 
 Подробную информацию об отладке и возможных проблемах можно найти
-[здесь](https://atom.io/docs/v1.2.4/hacking-atom-package-word-count#basic-debugging)
+[здесь](https://atom.io/docs/latest/hacking-atom-package-word-count#basic-debugging)
 и [здесь](https://code.visualstudio.com/docs/extensions/debugging-extensions).
 
 Чтобы запустить VSC в режиме отладки, нажмите `F5`. При этом так же загрузится
