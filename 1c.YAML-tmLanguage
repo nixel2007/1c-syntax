@@ -17,7 +17,7 @@ patterns:
     begin: \"
     end: \"
     patterns:
-    - match: ""
+    - match: \"\"
     - name: constant.character.escape.bsl
 
   - comment: "Proc and function defenition"
