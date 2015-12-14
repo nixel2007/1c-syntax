@@ -153,6 +153,7 @@ npm install -g vsce
 [sublime-language-1c-bsl] git tag "v<version>"
 [sublime-language-1c-bsl] git push origin "v<version>"
 
+[vsc-language-1c-bsl] `bump version in package.json && commit`
 [vsc-language-1c-bsl] git push
 [vsc-language-1c-bsl] git tag "v<version>"
 [vsc-language-1c-bsl] git push origin "v<version>"
