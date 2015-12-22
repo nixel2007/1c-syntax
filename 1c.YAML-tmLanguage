@@ -33,9 +33,9 @@ patterns:
     - name: storage.modifier.bsl
       match: (?i:(?<=[^\wа-яё]|^)(Знач|Val)(?=[^\wа-яё]|$))
     - name: invalid.illegal.bsl
-      match: (?<=[^\wа-яё]|^)((?<==)(?i)[a-zа-яё0-9_]*)(?=[^\wа-яё]|$)
+      match: (?<=[^\wа-яё]|^)((?<==)(?i)[a-zа-яё0-9_]+)(?=[^\wа-яё]|$)
     - name: invalid.illegal.bsl
-      match: (?<=[^\wа-яё]|^)((?<== )(?i)[a-zа-яё0-9_]*)(?=[^\wа-яё]|$)
+      match: (?<=[^\wа-яё]|^)((?<==\s)\s*(?i)[a-zа-яё0-9_]+)(?=[^\wа-яё]|$)
     - name: variable.parameter.bsl
       match: (?i:[a-zа-яё0-9_]+)
 
