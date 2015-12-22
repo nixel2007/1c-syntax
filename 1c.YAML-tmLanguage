@@ -51,7 +51,7 @@ patterns:
     match: (?i:(?<=[^\wа-яё]|^)(Неопределено|Undefined|Истина|True|Ложь|False|NULL)(?=[^\wа-яё]|$))
 
   - name: constant.numeric.bsl
-    match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)(?=[^\wа-яё]|$)
+    match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b
 
   - name: constant.other.date.bsl
     match: \'.+\'
