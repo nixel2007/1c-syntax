@@ -21,26 +21,26 @@ patterns:
     - name: constant.character.escape.bsl
 
   - comment: "Proc and function defenition"
-    begin: '(?i:(?<=[^\wа-ё]|^)(Процедура|Procedure|Функция|Function)\s+([a-zа-я0-9_]+)\s*\()'
+    begin: '(?i:(?<=[^\wа-яё]|^)(Процедура|Procedure|Функция|Function)\s+([a-zа-яё0-9_]+)\s*\()'
     beginCaptures:
       '1': {name: storage.type.bsl}
       '2': {name: entity.name.function.bsl}
-    end: '(?i:\)\s+((Экспорт|Export)(?=[^\wа-ё]|$))?)'
+    end: '(?i:\)\s+((Экспорт|Export)(?=[^\wа-яё]|$))?)'
     endCaptures:
       '1': {name: storage.modifier.bsl}
     patterns:
     - include: $self
     - name: storage.modifier.bsl
-      match: (?i:(?<=[^\wа-ё]|^)(Знач|Val)(?=[^\wа-ё]|$))
+      match: (?i:(?<=[^\wа-яё]|^)(Знач|Val)(?=[^\wа-яё]|$))
     - name: invalid.illegal.bsl
-      match: (?<=[^\wа-ё]|^)((?<==)(?i)[a-zа-я0-9_]*)(?=[^\wа-ё]|$)
+      match: (?<=[^\wа-яё]|^)((?<==)(?i)[a-zа-яё0-9_]*)(?=[^\wа-яё]|$)
     - name: invalid.illegal.bsl
-      match: (?<=[^\wа-ё]|^)((?<== )(?i)[a-zа-я0-9_]*)(?=[^\wа-ё]|$)
+      match: (?<=[^\wа-яё]|^)((?<== )(?i)[a-zа-яё0-9_]*)(?=[^\wа-яё]|$)
     - name: variable.parameter.bsl
-      match: (?i:[a-zа-я0-9_]+)
+      match: (?i:[a-zа-яё0-9_]+)
 
   - comment: "Define of variable"
-    begin: (?i:(?<=[^\wа-ё]|^)(Перем|Var)\s+[a-zа-я0-9_]+\s*)
+    begin: (?i:(?<=[^\wа-яё]|^)(Перем|Var)\s+[a-zа-яё0-9_]+\s*)
     beginCaptures:
       '1': {name: storage.type.var.bsl}
     end: (?i:(Экспорт|Export)?)
@@ -48,34 +48,34 @@ patterns:
       '1': {name: storage.modifier.bsl}
 
   - name: constant.language.bsl
-    match: (?i:(?<=[^\wа-ё]|^)(Неопределено|Undefined|Истина|True|Ложь|False|NULL)(?=[^\wа-ё]|$))
+    match: (?i:(?<=[^\wа-яё]|^)(Неопределено|Undefined|Истина|True|Ложь|False|NULL)(?=[^\wа-яё]|$))
 
   - name: constant.numeric.bsl
-    match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)(?=[^\wа-ё]|$)
+    match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)(?=[^\wа-яё]|$)
 
   - name: constant.other.date.bsl
     match: \'.+\'
 
   - name: storage.type.bsl
-    match: (?i:(?<=[^\wа-ё]|^)(КонецПроцедуры|EndProcedure|КонецФункции|EndFunction)(?=[^\wа-ё]|$))
+    match: (?i:(?<=[^\wа-яё]|^)(КонецПроцедуры|EndProcedure|КонецФункции|EndFunction)(?=[^\wа-яё]|$))
 
   - name: keyword.control.import.bsl
-    match: \#(Использовать|Use)(?=[^\wа-ё]|$)
+    match: \#(Использовать|Use)(?=[^\wа-яё]|$)
 
   - name: keyword.control.bsl
-    match: (?i:(?<=[^\wа-ё]|^)(Прервать|Break|Продолжить|Continue|Возврат|Return)(?=[^\wа-ё]|$))
+    match: (?i:(?<=[^\wа-яё]|^)(Прервать|Break|Продолжить|Continue|Возврат|Return)(?=[^\wа-яё]|$))
 
   - name: keyword.control.conditional.bsl
-    match: (?i:(?<=[^\wа-ё]|^)(Если|If|Иначе|Else|ИначеЕсли|ElsIf|Тогда|Then|КонецЕсли|EndIf)(?=[^\wа-ё]|$))
+    match: (?i:(?<=[^\wа-яё]|^)(Если|If|Иначе|Else|ИначеЕсли|ElsIf|Тогда|Then|КонецЕсли|EndIf)(?=[^\wа-яё]|$))
 
   - name: keyword.control.exception.bsl
-    match: (?i:(?<=[^\wа-ё]|^)(Попытка|Try|Исключение|Except|КонецПопытки|EndTry|ВызватьИсключение|Raise)(?=[^\wа-ё]|$))
+    match: (?i:(?<=[^\wа-яё]|^)(Попытка|Try|Исключение|Except|КонецПопытки|EndTry|ВызватьИсключение|Raise)(?=[^\wа-яё]|$))
 
   - name: keyword.control.repeat.bsl
-    match: (?i:(?<=[^\wа-ё]|^)(Пока|While|(Для|For) (Каждого|Each)?|Из|In|По|To|Цикл|Do|КонецЦикла|EndDo)(?=[^\wа-ё]|$))
+    match: (?i:(?<=[^\wа-яё]|^)(Пока|While|(Для|For) (Каждого|Each)?|Из|In|По|To|Цикл|Do|КонецЦикла|EndDo)(?=[^\wа-яё]|$))
 
   - name: keyword.operator.logical.bsl
-    match: (?i:(?<=[^\wа-ё]|^)(НЕ|NOT|И|AND|ИЛИ|OR)(?=[^\wа-ё]|$))
+    match: (?i:(?<=[^\wа-яё]|^)(НЕ|NOT|И|AND|ИЛИ|OR)(?=[^\wа-яё]|$))
 
   - name: keyword.operator.comparison.bsl
     match: <=|>=|=|<|>
@@ -91,7 +91,7 @@ patterns:
 
   - name: support.function.bsl
     comment: "Functions w/o brackets"
-    match: (?i:(?<=[^\wа-ё]|^)(Новый|New)(?=[^\wа-ё]|$))
+    match: (?i:(?<=[^\wа-яё]|^)(Новый|New)(?=[^\wа-яё]|$))
 
   - name: support.function.bsl
     comment: "Functions w/ brackets"
