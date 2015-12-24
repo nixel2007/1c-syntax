@@ -147,8 +147,9 @@ npm install -g vsce
 `<version>` обозначает версию пакета, устанавливаемого в `package.json` основного репо. `"v<version>"` означает строку, например, "v1.0.0".
 
 ```
-[1с-syntax] `bump version in package.json && commit && push`
+[1с-syntax] `bump version in package.json && make a changelog && commit && push`
 [1с-syntax] oscript -encoding=utf-8 build.os
+[1с-syntax] oscript -encoding=utf-8 publish.os
 
 [sublime-language-1c-bsl] git push
 [sublime-language-1c-bsl] git tag "v<version>"
