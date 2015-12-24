@@ -1,6 +1,6 @@
 {
   "name": "1c-syntax",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors",
   "dependencies": {
     "cson": "^3.0.2",
