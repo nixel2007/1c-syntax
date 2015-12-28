@@ -95,7 +95,7 @@ patterns:
 
   - name: support.function.bsl
     comment: "Functions w/ brackets"
-    match: (^|\s)(?i:(Вычислить|Eval|Выполнить|Execute|ИнформацияОбОшибке|ErrorInfo|Макс|Max|Мин|Min|ОписаниеОшибки|ErrorDescription|СтрШаблон|StrTemplate|Формат|Format))\s*(?=\()
+    match: (^|\s)(?i:(Вычислить|Eval|Выполнить|Execute|ИнформацияОбОшибке|ErrorInfo|Макс|Max|Мин|Min|ОписаниеОшибки|ErrorDescription))\s*(?=\()
 
   - comment: "Глобальный контекст - функции работы со значениями типа Строка"
     name: support.function.bsl
@@ -116,6 +116,18 @@ patterns:
   - comment: "Глобальный контекст - функции преобразования значений"
     name: support.function.bsl
     match: (?i:(?<=[^\wа-яё]|^)(Булево|Boolean|Число|Number|Строка|String|Дата|Date)\s*(?=\())
+
+  - comment: "Глобальный контекст - процедуры и функции интерактивной работы"
+    name: support.function.bsl
+    match: (?i:(?<=[^\wа-яё]|^)(ПоказатьВопрос|ShowQueryBox|Вопрос|DoQueryBox|ПоказатьПредупреждение|ShowMessageBox|Предупреждение|DoMessageBox|Сообщить|Message|ОчиститьСообщения|ClearMessages|ОповеститьОбИзменении|NotifyChanged|Состояние|Status|Сигнал|Beep|ПоказатьЗначение|ShowValue|ОткрытьЗначение|OpenValue|Оповестить|Notify|ОбработкаПрерыванияПользователя|UserInterruptProcessing|ОткрытьСодержаниеСправки|OpenHelpContent|ОткрытьИндексСправки|OpenHelpIndex|ОткрытьСправку|OpenHelp|ПоказатьИнформациюОбОшибке|ShowErrorInfo|КраткоеПредставлениеОшибки|BriefErrorDescription|ПодробноеПредставлениеОшибки|DetailErrorDescription|ПолучитьФорму|GetForm|ЗакрытьСправку|CloseHelp|ПоказатьОповещениеПользователя|ShowUserNotification|ОткрытьФорму|OpenForm|ОткрытьФормуМодально|OpenFormModal|АктивноеОкно|ActiveWindow|ВыполнитьОбработкуОповещения|ExecuteNotifyProcessing)\s*(?=\())
+
+  - comment: "Глобальный контекст - функции для вызова диалога ввода данных"
+    name: support.function.bsl
+    match: (?i:(?<=[^\wа-яё]|^)(ПоказатьВводЗначения|ShowInputValue|ВвестиЗначение|InputValue|ПоказатьВводЧисла|ShowInputNumber|ВвестиЧисло|InputNumber|ПоказатьВводСтроки|ShowInputString|ВвестиСтроку|InputString|ПоказатьВводДаты|ShowInputDate|ВвестиДату|InputDate)\s*(?=\())
+
+  - comment: "Глобальный контекст - функции форматирования"
+    name: support.function.bsl
+    match: (?i:(?<=[^\wа-яё]|^)(Формат|Format|ЧислоПрописью|NumberInWords|НСтр|NStr|ПредставлениеПериода|PeriodPresentation|СтрШаблон|StrTemplate)\s*(?=\())
 
   - name: storage.modifier.bsl
     match: (?i:&(НаКлиенте((НаСервере(БезКонтекста)?)?)|AtClient((AtServer(NoContext)?)?)|НаСервере(БезКонтекста)?|AtServer(NoContext)?))
