@@ -169,6 +169,26 @@ patterns:
     name: support.function.bsl
     match: (?i:(?<=[^\wа-яё]|^)(ЗаписатьJSON|WriteJSON|ПрочитатьJSON|ReadJSON|ПрочитатьДатуJSON|ReadJSONDate|ЗаписатьДатуJSON|WriteJSONDate)\s*(?=\())
 
+  - comment: "Глобальный контекст - Процедуры и функции работы с журналом регистрации"
+    name: support.function.bsl
+    match: (?i:(?<=[^\wа-яё]|^)(ЗаписьЖурналаРегистрации|WriteLogEvent|ПолучитьИспользованиеЖурналаРегистрации|GetEventLogUsing|УстановитьИспользованиеЖурналаРегистрации|SetEventLogUsing|ПредставлениеСобытияЖурналаРегистрации|EventLogEventPresentation|ВыгрузитьЖурналРегистрации|UnloadEventLog|ПолучитьЗначенияОтбораЖурналаРегистрации|GetEventLogFilterValues|УстановитьИспользованиеСобытияЖурналаРегистрации|SetEventLogEventUse|ПолучитьИспользованиеСобытияЖурналаРегистрации|GetEventLogEventUse|СкопироватьЖурналРегистрации|CopyEventLog|ОчиститьЖурналРегистрации|ClearEventLog)\s*(?=\())
+
+  - comment: "Глобальный контекст - Процедуры и функции работы с универсальными объектами"
+    name: support.function.bsl
+    match: (?i:(?<=[^\wа-яё]|^)(ЗначениеВДанныеФормы|ValueToFormData|ДанныеФормыВЗначение|FormDataToValue|КопироватьДанныеФормы|CopyFormData|УстановитьСоответствиеОбъектаИФормы|SetObjectAndFormConformity|ПолучитьСоответствиеОбъектаИФормы|GetObjectAndFormConformity)\s*(?=\())
+
+  - comment: "Глобальный контекст - Процедуры и функции работы с функциональными опциями"
+    name: support.function.bsl
+    match: (?i:(?<=[^\wа-яё]|^)(ПолучитьФункциональнуюОпцию|GetFunctionalOption|ПолучитьФункциональнуюОпциюИнтерфейса|GetInterfaceFunctionalOption|УстановитьПараметрыФункциональныхОпцийИнтерфейса|SetInterfaceFunctionalOptionParameters|ПолучитьПараметрыФункциональныхОпцийИнтерфейса|GetInterfaceFunctionalOptionParameters|ОбновитьИнтерфейс|RefreshInterface)\s*(?=\())
+
+  - comment: "Глобальный контекст - Процедуры и функции работы с криптографией"
+    name: support.function.bsl
+    match: (?i:(?<=[^\wа-яё]|^)(УстановитьРасширениеРаботыСКриптографией|InstallCryptoExtension|НачатьУстановкуРасширенияРаботыСКриптографией|BeginInstallCryptoExtension|ПодключитьРасширениеРаботыСКриптографией|AttachCryptoExtension|НачатьПодключениеРасширенияРаботыСКриптографией|BeginAttachingCryptoExtension)\s*(?=\())
+
+  - comment: "Глобальный контекст - Процедуры и функции работы со стандартным интерфейсом OData"
+    name: support.function.bsl
+    match: (?i:(?<=[^\wа-яё]|^)(УстановитьСоставСтандартногоИнтерфейсаOData|SetStandardODataInterfaceContent|ПолучитьСоставСтандартногоИнтерфейсаOData|GetStandardODataInterfaceContent)\s*(?=\())
+
   - name: storage.modifier.bsl
     match: (?i:&(НаКлиенте((НаСервере(БезКонтекста)?)?)|AtClient((AtServer(NoContext)?)?)|НаСервере(БезКонтекста)?|AtServer(NoContext)?))
 
