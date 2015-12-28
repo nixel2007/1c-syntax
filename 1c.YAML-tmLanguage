@@ -72,7 +72,7 @@ patterns:
     match: (?i:(?<=[^\wа-яё]|^)(Попытка|Try|Исключение|Except|КонецПопытки|EndTry|ВызватьИсключение|Raise)(?=[^\wа-яё]|$))
 
   - name: keyword.control.repeat.bsl
-    match: (?i:(?<=[^\wа-яё]|^)(Пока|While|(Для|For) (Каждого|Each)?|Из|In|По|To|Цикл|Do|КонецЦикла|EndDo)(?=[^\wа-яё]|$))
+    match: (?i:(?<=[^\wа-яё]|^)(Пока|While|(Для|For)(\s+(Каждого|Each))?|Из|In|По|To|Цикл|Do|КонецЦикла|EndDo)(?=[^\wа-яё]|$))
 
   - name: keyword.operator.logical.bsl
     match: (?i:(?<=[^\wа-яё]|^)(НЕ|NOT|И|AND|ИЛИ|OR)(?=[^\wа-яё]|$))
