@@ -8,7 +8,7 @@ uuid: cf0633ff-beee-424a-a2f7-3dce4093e139
 patterns:
 
   - name: comment.line.double-slash.bsl
-    match: (//.*\n)
+    match: (//.*\n?)
 
   - name: string.quoted.double.bsl
     match: ("[^"]*")
