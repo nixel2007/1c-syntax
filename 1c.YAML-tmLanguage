@@ -11,9 +11,6 @@ patterns:
     match: (//.*$)
 
   - name: string.quoted.double.bsl
-    match: ("[^"]*")
-
-  - name: string.interpolated.bsl
     begin: \"
     end: \"
     patterns:
