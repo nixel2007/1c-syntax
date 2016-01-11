@@ -14,8 +14,10 @@ patterns:
     begin: \"
     end: \"
     patterns:
-    - match: \"\"
     - name: constant.character.escape.bsl
+      match: \"\"
+    - name: comment.line.double-slash.bsl
+      match: (//.*$)
 
   - comment: "Proc and function defenition"
     begin: '(?i:(?<=[^\wа-яё]|^)(Процедура|Procedure|Функция|Function)\s+([a-zа-яё0-9_]+)\s*\()'
