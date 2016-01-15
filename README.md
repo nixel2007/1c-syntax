@@ -26,7 +26,7 @@ Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (S
 |---|:---:|:---:|:---:|
 | Блочное комментирование через `//` | Есть | Есть | Есть |
 | Список процедур и функций текущего файла | Есть | Есть | [Нет](https://github.com/xDrivenDevelopment/1c-syntax/issues/59) |
-| Переход к опредлению процедур и функций | Есть | Есть | [Нет](https://github.com/xDrivenDevelopment/1c-syntax/issues/60) |
+| Переход к определению процедур и функций | Есть | Есть | [Нет](https://github.com/xDrivenDevelopment/1c-syntax/issues/60) |
 | Автоматическое добавление символа &#124; при добавлении новой строки во время редактирования строкового литерала | Есть | Есть | Есть |
 | Запуск скриптов `.os`/`.bsl` с помощью OneScript | Есть | Есть | Есть |
 
