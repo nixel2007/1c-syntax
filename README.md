@@ -5,7 +5,7 @@
 Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (Sublime Text, Atom and VS Code).
 
 ## Цель репозитория
-Данный репозиторий создан для консолидации работ по созданию пакетов для текстовых редакторов [Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com/) и [Visual Studio Code](https://www.visualstudio.com/en-us/products/code-vs.aspx).  
+Данный репозиторий создан для консолидации работ по развитию пакетов, добавляющих поддержку языка 1С:Предприятие 8, для текстовых редакторов [Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com/) и [Visual Studio Code](https://www.visualstudio.com/en-us/products/code-vs.aspx).  
 Под каждый из редакторов создан отдельный репозиторий и опубликован соответствующий пакет на площадке распространения пакетов:
 
 | Репозиторий | Пакет |
