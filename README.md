@@ -25,8 +25,9 @@ Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (S
 | Функционал \ Поддержка в редакторах | [Atom](https://github.com/xDrivenDevelopment/atom-language-1c-bsl) | [Sublime Text](https://github.com/xDrivenDevelopment/sublime-language-1c-bsl) | [VS Code](https://github.com/xDrivenDevelopment/vsc-language-1c-bsl) |
 |---|:---:|:---:|:---:|
 | Блочное комментирование через `//` | Есть | Есть | Есть |
-| Список процедур и функций текущего файла | Есть | Есть | [Нет](https://github.com/xDrivenDevelopment/1c-syntax/issues/59) |
-| Переход к определению процедур и функций | Есть | Есть | [Нет](https://github.com/xDrivenDevelopment/1c-syntax/issues/60) |
+| Список процедур и функций текущего файла | Есть | Есть | Есть |
+| Список процедур и функций рабочего каталога | Есть | Есть | [Нет](https://github.com/xDrivenDevelopment/1c-syntax/issues/59) |
+| Переход к определению процедур и функций | Есть | Есть | Есть |
 | Автоматическое добавление символа &#124; при добавлении новой строки во время редактирования строкового литерала | Есть | Есть | Есть |
 | Запуск скриптов `.os`/`.bsl` с помощью OneScript | Есть | Есть | Есть |
 
