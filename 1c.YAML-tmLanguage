@@ -205,3 +205,14 @@ patterns:
 
   - name: keyword.other.preprocessor.bsl
     match: (?i:#(Если|If|ИначеЕсли|ElsIf|Иначе|Else|КонецЕсли|EndIf).*(Тогда|Then)?)
+
+  - comment: "Region start"
+    begin: (?i)(#(Область|Region))(\s+([\wа-яё]+))?
+    beginCaptures:
+      '1': {name: keyword.other.section.bsl}
+      '4': {name: entity.name.section.bsl}
+    end: $
+
+  - comment: "Region end"
+    name: keyword.other.preprocessor.bsl
+    match: (?i)#(КонецОбласти|EndRegion)
