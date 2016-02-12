@@ -214,5 +214,5 @@ patterns:
     end: $
 
   - comment: "Region end"
-    name: keyword.other.preprocessor.bsl
+    name: keyword.other.section.bsl
     match: (?i)#(КонецОбласти|EndRegion)
