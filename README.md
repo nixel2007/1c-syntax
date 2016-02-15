@@ -24,6 +24,7 @@ Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (S
 
 | Функционал \ Поддержка в редакторах | [Atom](https://github.com/xDrivenDevelopment/atom-language-1c-bsl) | [Sublime Text](https://github.com/xDrivenDevelopment/sublime-language-1c-bsl) | [VS Code](https://github.com/xDrivenDevelopment/vsc-language-1c-bsl) |
 |---|:---:|:---:|:---:|
+| Подсветка текста запроса внутри модуля и отдельно | Есть | Есть | Есть |
 | Блочное комментирование через `//` | Есть | Есть | Есть |
 | Список процедур и функций текущего файла | Есть | Есть | Есть |
 | Список процедур и функций рабочего каталога | Есть | Есть | [Нет](https://github.com/xDrivenDevelopment/1c-syntax/issues/59) |
