@@ -8,7 +8,10 @@ uuid: d94265d3-2270-4ff2-ba36-649fbb4160df
 patterns:
 
   - name: comment.line.double-slash.sdbl
-    match: (//.*$)
+    match: (^\s*//.*$)
+
+  - name: comment.line.double-slash.sdbl
+    match: (//.*)
 
   - name: string.quoted.double.sdbl
     begin: \"

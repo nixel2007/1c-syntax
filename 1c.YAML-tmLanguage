@@ -225,7 +225,8 @@ repository:
       '1': {name: keyword.control.sdbl}
     end: (?=\"[^\"])
     patterns:
+    - name: comment.line.double-slash.sdbl
+      match: (//((\"\")|[^\"])*)
     - name: string.quoted.double.sdbl
-      begin: \"\"
-      end: \"\"
+      match: \"\"[^"]*\"\"
     - include: source.sdbl
