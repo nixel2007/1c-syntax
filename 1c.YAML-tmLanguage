@@ -223,6 +223,6 @@ repository:
     begin: (?i)(Выбрать|Select(\s+Разрешенные|Allowed)?(\s+Различные|Distinct)?(\s+Первые|Top)?)
     beginCaptures:
       '1': {name: keyword.control.sdbl}
-    end: (?=\")
+    end: (?=\"[^\"])
     patterns:
     - include: source.sdbl
