@@ -5,7 +5,7 @@
   "dependencies": {
     "cson": "^3.0.2",
     "plist": "^1.2.0",
-    "yamljs": "^0.2.5"
+    "yamljs": "^0.2.6"
   },
   "devDependencies": {},
   "repository": {
