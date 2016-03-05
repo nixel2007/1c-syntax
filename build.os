@@ -143,7 +143,7 @@
 	|
 	|	var snippetString = '';
 	|	snippetString = '<snippet>\n\
-	|	<content>' + snippetObject.content + '</content>\n\
+	|	<content><![CDATA[' + snippetObject.content + ']]></content>\n\
 	|	<tabTrigger>' + snippetObject.tabTrigger + '</tabTrigger>\n\
 	|	<scope>' + snippetObject.scope + '</scope>\n\
 	|	<description>' + snippetObject.description + '</description>\n\

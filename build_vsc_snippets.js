@@ -7,7 +7,7 @@ for (snippetObject of jsonObject) {
 
   vscSnippet = {};
   vscSnippet.prefix = snippetObject.tabTrigger;
-  vscSnippet.body = snippetObject.content.replace("<![CDATA[", "").replace("]]>", "");;
+  vscSnippet.body = snippetObject.content;
   vscSnippet.description = snippetObject.description;
   vscSnippet.scope = snippetObject.scope;
 
