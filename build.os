@@ -130,39 +130,12 @@
 	ИмяФайлаСниппетов = "snippets";
 	Ожидаем.Что(Новый Файл("snippets.yml").Существует(), "Ожидаем, что файл сниппетов существует").ЭтоИстина();
 		
-	ИмяВременногоФайла = ОбъединитьПути(КаталогСборки, "build_tmSnippet.js");
+	КомандаЗапуска = "node build_st_snippets.js";
+	ВыполнитьКоманду(КомандаЗапуска, "Ошибка сбора сниппетов для ST");
 	
-	ТекстовыйДокумент = Новый ТекстовыйДокумент;
-	
-	ТекстСкрипта =
-	"var yaml = require('yamljs');
-	|var fs = require('fs');
-	|
-	|var jsonObject = yaml.load('%2.yml');
-	|for (snippetObject of jsonObject) {
-	|
-	|	var snippetString = '';
-	|	snippetString = '<snippet>\n\
-	|	<content><![CDATA[' + snippetObject.content + ']]></content>\n\
-	|	<tabTrigger>' + snippetObject.tabTrigger + '</tabTrigger>\n\
-	|	<scope>' + snippetObject.scope + '</scope>\n\
-	|	<description>' + snippetObject.description + '</description>\n\
-	|</snippet>';
-	|
-	|	fs.writeFileSync('./%1/snippets/' + snippetObject.description.replace('/', '-') + '.sublime-snippet', snippetString);
-	|
-	|};";
-	
-	ТекстСкрипта = СтрШаблон(ТекстСкрипта, ИмяКаталогаСборки, ИмяФайлаСниппетов);
-	
-	ТекстовыйДокумент.УстановитьТекст(ТекстСкрипта);
-	ТекстовыйДокумент.Записать(ИмяВременногоФайла);
-	
-	КомандаЗапуска = "node " + ИмяВременногоФайла;
-	ВыполнитьКоманду(КомандаЗапуска, "Ошибка компиляции JSON -> tmSnippet");
-	
-	УдалитьФайлы(ИмяВременногоФайла);
-	
+	КомандаЗапуска = "node build_vsc_snippets.js";
+	ВыполнитьКоманду(КомандаЗапуска, "Ошибка сбора сниппетов для VSC");
+		
 КонецПроцедуры
 	
 Функция ОбернутьВКавычки(Знач Строка)
