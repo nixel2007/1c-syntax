@@ -1432,7 +1432,7 @@
   scope: source.bsl
   content: "DoQueryBox(\"${1:PromptText}\", ${2:DialogPrompt}) = ${3:DialogReturnCode}"
 - description: Type check
-  tabTrigger: CheckType
+  tabTrigger: TypeCheck
   scope: source.bsl
   content: |+
     If TypeOf(${1:ExpressionForTypeCheck}) = Type("${2:ChooseType}") Then
