@@ -888,8 +888,7 @@
 - description: Compilation directive
   tabTrigger: Directive
   scope: source.bsl
-  content: "&${1:ChooseACompilationDirective}
-"
+  content: "&${1:ChooseACompilationDirective}"
 - description: Instruction If
   tabTrigger: Instrution
   scope: source.bsl
