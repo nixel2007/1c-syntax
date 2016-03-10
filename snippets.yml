@@ -1,0 +1,1440 @@
+﻿
+- description: Если
+  tabTrigger: Если
+  scope: source.bsl
+  content: |+
+    Если ${1:Условие} Тогда
+    	$0
+    КонецЕсли;
+- description: ЕслиИначе
+  tabTrigger: Если
+  scope: source.bsl
+  content: |+
+    Если ${1:Условие} Тогда
+    	$0
+    Иначе
+    КонецЕсли;
+- description: Пока
+  tabTrigger: Пока
+  scope: source.bsl
+  content: |+
+    Пока ${1:Условие} Цикл
+    	$0
+    КонецЦикла;
+- description: Для
+  tabTrigger: Для
+  scope: source.bsl
+  content: |+
+    Для ${1:Счетчик} По ${2:Ограничение} Цикл
+    	$0
+    КонецЦикла;
+- description: Для каждого
+  tabTrigger: ДляКаждого
+  scope: source.bsl
+  content: |+
+    Для каждого ${1:Переменная} Из ${2:Коллекция} Цикл
+    	$0
+    КонецЦикла;
+- description: Процедура
+  tabTrigger: Процедура
+  scope: source.bsl
+  content: |+
+    Процедура ${1:ИмяПроцедуры}()
+    	$0
+    КонецПроцедуры
+- description: Процедура (с заголовком)
+  tabTrigger: Процедура
+  scope: source.bsl
+  content: |+
+    // <Описание процедуры>
+    //
+    // Параметры:
+    //  <Параметр1>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //  <Параметр2>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //
+    Процедура ${1:ИмяПроцедуры}()
+    	$0
+    КонецПроцедуры // ${1:ИмяПроцедуры}()
+- description: Процедура модуля формы
+  tabTrigger: Процедура
+  scope: source.bsl
+  content: |+
+    // <Описание процедуры>
+    //
+    // Параметры:
+    //  <Параметр1>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //  <Параметр2>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //
+    &${1:ВыберитеДирективуКомпиляции}
+    Процедура ${2:ИмяПроцедуры}()
+    	$0
+    КонецПроцедуры // ${2:ИмяПроцедуры}()
+- description: Процедура модуля команды
+  tabTrigger: Процедура
+  scope: source.bsl
+  content: |+
+    // <Описание процедуры>
+    //
+    // Параметры:
+    //  <Параметр1>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //  <Параметр2>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //
+    &${1:ВыберитеДирективуКомпиляции}
+    Процедура ${2:ИмяПроцедуры}()
+    	$0
+    КонецПроцедуры // ${2:ИмяПроцедуры}()
+- description: Функция
+  tabTrigger: Функция
+  scope: source.bsl
+  content: |+
+    Функция ${1:ИмяФункции}()
+    	$0
+    КонецФункции // ${1:ИмяФункции}()
+- description: Функция (с заголовком)
+  tabTrigger: Функция
+  scope: source.bsl
+  content: |+
+    // <Описание функции>
+    //
+    // Параметры:
+    //  <Параметр1>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //  <Параметр2>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //
+    // Возвращаемое значение:
+    //   <Тип.Вид>   - <описание возвращаемого значения>
+    //
+    Функция ${1:ИмяФункции}()
+    	$0
+    КонецФункции // ${1:ИмяФункции}()
+- description: Функция модуля формы
+  tabTrigger: Функция
+  scope: source.bsl
+  content: |+
+    // <Описание функции>
+    //
+    // Параметры:
+    //  <Параметр1>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //  <Параметр2>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //
+    // Возвращаемое значение:
+    //   <Тип.Вид>   - <описание возвращаемого значения>
+    //
+    &${1:ВыберитеДирективуКомпиляции}
+    Функция ${2:ИмяФункции}()
+    	$0
+    КонецФункции // ${2:ИмяФункции}()
+- description: Функция модуля команды
+  tabTrigger: Функция
+  scope: source.bsl
+  content: |+
+    // <Описание функции>
+    //
+    // Параметры:
+    //  <Параметр1>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //  <Параметр2>  - <Тип.Вид> - <описание параметра>
+    //                 <продолжение описания параметра>
+    //
+    // Возвращаемое значение:
+    //   <Тип.Вид>   - <описание возвращаемого значения>
+    //
+    &${1:ВыберитеДирективуКомпиляции}
+    Функция ${2:ИмяФункции}()
+    	$0
+    КонецФункции // ${2:ИмяФункции}()
+- description: Возврат
+  tabTrigger: Возврат
+  scope: source.bsl
+  content: "Возврат;$0"
+- description: Попытка
+  tabTrigger: Попытка
+  scope: source.bsl
+  content: |+
+    Попытка
+    	$0
+    Исключение
+    КонецПопытки;
+- description: Директива компиляции
+  tabTrigger: Директива
+  scope: source.bsl
+  content: "&${1:ВыберитеДирективуКомпиляции}"
+- description: Инструкция Если
+  tabTrigger: Инструкция
+  scope: source.bsl
+  content: |+
+    #Если ${1:ВыберитеИнструкциюПрепроцессора} Тогда
+    	$0
+    #КонецЕсли
+- description: Инструкция Область
+  tabTrigger: \#Область
+  scope: source.bsl
+  content: |+
+    #Область $0
+    #КонецОбласти
+- description: Перечисление
+  tabTrigger: Перечисление
+  scope: source.bsl
+  content: "ПредопределенноеЗначение(\"Перечисление.${1:ВыберитеЗначениеПеречисления}\")"
+- description: Получить функциональную опцию
+  tabTrigger: Функциональнаяопция
+  scope: source.bsl
+  content: "ПолучитьФункциональнуюОпцию(\"${1:ВыберитеФункциональнуюОпцию}\")"
+- description: Получить функциональную опцию интерфейса
+  tabTrigger: Функциональнаяопция
+  scope: source.bsl
+  content: "ПолучитьФункциональнуюОпциюИнтерфейса(\"${1:ВыберитеФункциональнуюОпцию}\")"
+- description: Открыть общую форму
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"ОбщаяФорма.${1:ВыберитеОбщуюФорму}\");"
+- description: Открыть общую форму (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("ОбщаяФорма.${1:ВыберитеОбщуюФорму}", ПараметрыФормы);
+- description: Получить общую форму
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"ОбщаяФорма.${1:ВыберитеОбщуюФорму}\");"
+- description: Получить общую форму (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("ОбщаяФорма.${1:ВыберитеОбщуюФорму}");
+- description: Открыть форму плана обмена
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"ПланОбмена.${1:ВыберитеПланОбмена}.${2:ВыберитеФорму}\");"
+- description: Открыть форму плана обмена (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("ПланОбмена.${1:ВыберитеПланОбмена}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму плана обмена
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"ПланОбмена.${1:ВыберитеПланОбмена}.${2:ВыберитеФорму}\");"
+- description: Получить форму плана обмена (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("ПланОбмена.${1:ВыберитеПланОбмена}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Обход элементов
+  tabTrigger: ПланыОбменаВыбрать
+  scope: source.bsl
+  content: |+
+    Выборка = ПланыОбмена.$1.Выбрать();
+    Пока Выборка.Следующий() Цикл
+    	$0
+    КонецЦикла;
+- description: Получить/установить константу
+  tabTrigger: Константы
+  scope: source.bsl
+  content: "Константы.$1.${2:ВыборМетода}()"
+- description: Установить константу
+  tabTrigger: Константы
+  scope: source.bsl
+  content: "Константы.$1.Установить($0);"
+- description: Получить константу
+  tabTrigger: Константы
+  scope: source.bsl
+  content: "Константы.$1.Получить()"
+- description: Открыть форму справочника
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"Справочник.${1:ВыберитеСправочник}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму справочника (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("Справочник.${1:ВыберитеСправочник}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму справочника
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"Справочник.${1:ВыберитеСправочник}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму справочника (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("Справочник.${1:ВыберитеСправочник}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Обход элементов
+  tabTrigger: СправочникиВыбрать
+  scope: source.bsl
+  content: |+
+    Выборка = Справочники.$1.Выбрать();
+    Пока Выборка.Следующий() Цикл
+    	$0
+    КонецЦикла;
+- description: Обход элементов иерархически
+  tabTrigger: СправочникиВыбратьИерархически
+  scope: source.bsl
+  content: |+
+    Выборка = Справочники.$1.ВыбратьИерархически();
+    Пока Выборка.Следующий() Цикл
+    	$0
+    КонецЦикла;
+- description: Открыть форму документа
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"Документ.${1:ВыберитеДокумент}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму документа (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("Документ.${1:ВыберитеДокумент}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму документа
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"Документ.${1:ВыберитеДокумент}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму документа (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("Документ.${1:ВыберитеДокумент}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Обход документов
+  tabTrigger: ДокументыВыбрать
+  scope: source.bsl
+  content: |+
+    Выборка = Документы.$1.Выбрать();
+    Пока Выборка.Следующий() Цикл
+    	$0
+    КонецЦикла;
+- description: Движения
+  tabTrigger: Движения
+  scope: source.bsl
+  content: "Движения.${1:ВыборРегистра}"
+- description: Открыть форму отчета
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"Отчет.${1:ВыберитеОтчет}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму отчета (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("Отчет.${1:ВыберитеОтчет}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму отчета
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"Отчет.${1:ВыберитеОтчет}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму отчета (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("Отчет.${1:ВыберитеОтчет}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Открыть форму обработки
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"Обработка.${1:ВыберитеОбработку}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму обработки (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("Обработка.${1:ВыберитеОбработку}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму обработки
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"Обработка.${1:ВыберитеОбработку}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму обработки (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("Обработка.${1:ВыберитеОбработку}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Открыть форму плана видов характеристик
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"ПланВидовХарактеристик.${1:ВыберитеПвх}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму плана видов характеристик (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("ПланВидовХарактеристик.${1:ВыберитеПвх}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму плана видов характеристик
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"ПланВидовХарактеристик.${1:ВыберитеПвх}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму плана видов характеристик (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("ПланВидовХарактеристик.${1:ВыберитеПвх}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Обход видов характеристик
+  tabTrigger: ПланыВидовХарактеристикВыбрать
+  scope: source.bsl
+  content: |+
+    Выборка = ПланыВидовХарактеристик.$1.Выбрать();
+    Пока Выборка.Следующий() Цикл
+    	$0
+    КонецЦикла;
+- description: Открыть форму плана счетов
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"ПланСчетов.${1:ВыберитеПланСчетов}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму плана счетов (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("ПланСчетов.${1:ВыберитеПланСчетов}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму плана счетов
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"ПланСчетов.${1:ВыберитеПланСчетов}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму плана счетов (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("ПланСчетов.${1:ВыберитеПланСчетов}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Найти по коду
+  tabTrigger: ПланыСчетов
+  scope: source.bsl
+  content: "ПланыСчетов.$1.НайтиПоКоду($0)"
+- description: Открыть форму плана видов расчета
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"ПланВидовРасчета.${1:ВыберитеПланВидовРасчета}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму плана видов расчета (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("ПланВидовРасчета.${1:ВыберитеПланВидовРасчета}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму плана видов расчета
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"ПланВидовРасчета.${1:ВыберитеПланВидовРасчета}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму плана видов расчета (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("ПланВидовРасчета.${1:ВыберитеПланВидовРасчета}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Обход видов расчета
+  tabTrigger: ПланыВидовРасчетаВыбрать
+  scope: source.bsl
+  content: |+
+    Выборка = ПланыВидовРасчета.$1.Выбрать();
+    Пока Выборка.Следующий() Цикл
+    	$0
+    КонецЦикла;
+- description: Открыть форму бизнес-процесса
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"БизнесПроцесс.${1:ВыберитеБизнес-Процесс}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму бизнес-процесса (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("БизнесПроцесс.${1:ВыберитеБизнес-Процесс}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму бизнес-процесса
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"БизнесПроцесс.${1:ВыберитеБизнес-Процесс}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму бизнес-процесса (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("БизнесПроцесс.${1:ВыберитеБизнес-Процесс}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Обход бизнес-процессов
+  tabTrigger: БизнесПроцессыВыбрать
+  scope: source.bsl
+  content: |+
+    Выборка = БизнесПроцессы.$1.Выбрать();
+    Пока Выборка.Следующий() Цикл
+    	$0
+    КонецЦикла;
+- description: Открыть форму задачи
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"Задача.${1:ВыберитеЗадачу}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму задачи (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("Задача.${1:ВыберитеЗадачу}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму задачи
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"Задача.${1:ВыберитеЗадачу}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму задачи (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("Задача.${1:ВыберитеЗадачу}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Открыть форму регистра сведений
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"РегистрСведений.${1:ВыберитеРегистрСведений}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму регистра сведений (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("РегистрСведений.${1:ВыберитеРегистрСведений}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму регистра сведений
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"РегистрСведений.${1:ВыберитеРегистрСведений}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму регистра сведений (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("РегистрСведений.${1:ВыберитеРегистрСведений}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Выборка записей регистра сведений
+  tabTrigger: РегистрыСведенийВыбрать
+  scope: source.bsl
+  content: |+
+    Выборка = РегистрыСведений.${1:ВыберитеРегистрСведений}.Выбрать();
+    Пока Выборка.Следующий() Цикл
+    	$0
+    КонецЦикла;
+- description: Выборка записей регистра сведений (по регистратору)
+  tabTrigger: РегистрыСведенийВыбратьПоРегистратору
+  scope: source.bsl
+  content: |+
+    Выборка = РегистрСведений.${1:ВыберитеРегистрСведений}.ВыбратьПоРегистратору($0);
+    Пока Выборка.Следующий() Цикл
+    КонецЦикла;
+- description: Открыть форму регистра накопления
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"РегистрНакопления.${1:ВыберитеРегистрНакопления}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму регистра накопления (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("РегистрНакопления.${1:ВыберитеРегистрНакопления}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму регистра накопления
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"РегистрНакопления.${1:ВыберитеРегистрНакопления}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму регистра накопления (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("РегистрНакопления.${1:ВыберитеРегистрНакопления}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Выборка записей регистра накопления
+  tabTrigger: РегистрНакопленияВыбрать
+  scope: source.bsl
+  content: |+
+    Выборка = РегистрНакопления.${1:ВыберитеРегистрНакопления}.Выбрать();
+    Пока Выборка.Следующий() Цикл
+    	$0
+    КонецЦикла;
+- description: Выборка записей регистра накопления (по регистратору)
+  tabTrigger: РегистрНакопленияВыбратьПоРегистратору
+  scope: source.bsl
+  content: |+
+    Выборка = РегистрНакопления.${1:ВыберитеРегистрНакопления}.ВыбратьПоРегистратору($0);
+    Пока Выборка.Следующий() Цикл
+    КонецЦикла;
+- description: Открыть форму регистра бухгалтерии
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"РегистрБухгалтерии.${1:ВыберитеРегистрБухгалтерии}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму регистра бухгалтерии (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("РегистрБухгалтерии.${1:ВыберитеРегистрБухгалтерии}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму регистра бухгалтерии
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"РегистрБухгалтерии.${1:ВыберитеРегистрБухгалтерии}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму регистра бухгалтерии (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("РегистрБухгалтерии.${1:ВыберитеРегистрБухгалтерии}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Выборка записей регистра бухгалтерии
+  tabTrigger: РегистрыБухгалтерииВыбрать
+  scope: source.bsl
+  content: |+
+    Выборка = РегистрыБухгалтерии.${1:ВыберитеРегистрБухгалтерии}.Выбрать();
+    Пока Выборка.Следующий() Цикл
+    	$0
+    КонецЦикла;
+- description: Выборка записей регистра бухгалтерии (по регистратору)
+  tabTrigger: РегистрыБухгалтерииВыбратьПоРегистратору
+  scope: source.bsl
+  content: |+
+    Выборка = РегистрыБухгалтерии.${1:ВыберитеРегистрБухгалтерии}.ВыбратьПоРегистратору($0);
+    Пока Выборка.Следующий() Цикл
+    КонецЦикла;
+- description: Открыть форму регистра расчета
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: "ОткрытьФорму(\"РегистрРасчета.${1:ВыберитеРегистрРасчета}.${2:ВыберитеФорму}$0\");"
+- description: Открыть форму регистра расчета (с параметрами)
+  tabTrigger: ОткрытьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    ОткрытьФорму("РегистрРасчета.${1:ВыберитеРегистрРасчета}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Получить форму регистра расчета
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: "ПолучитьФорму(\"РегистрРасчета.${1:ВыберитеРегистрРасчета}.${2:ВыберитеФорму}$0\");"
+- description: Получить форму регистра расчета (с параметрами)
+  tabTrigger: ПолучитьФорму
+  scope: source.bsl
+  content: |+
+    ПараметрыФормы = Новый Структура;
+    ПараметрыФормы.Вставить("$0", );
+    Форма = ПолучитьФорму("РегистрРасчета.${1:ВыберитеРегистрРасчета}.${2:ВыберитеФорму}", ПараметрыФормы);
+- description: Выборка записей регистра расчета
+  tabTrigger: РегистрыРасчетаВыбрать
+  scope: source.bsl
+  content: |+
+    Выборка = РегистрыРасчета.${1:ВыберитеРегистрРасчета}.Выбрать();
+    Пока Выборка.Следующий() Цикл
+    	$0
+    КонецЦикла;
+- description: Выборка записей регистра расчета (по регистратору)
+  tabTrigger: РегистрыРасчетаВыбратьПоРегистратору
+  scope: source.bsl
+  content: |+
+    Выборка = РегистрыРасчета.${1:ВыберитеРегистрРасчета}.ВыбратьПоРегистратору($0);
+    Пока Выборка.Следующий() Цикл
+    КонецЦикла;
+- description: Сообщение
+  tabTrigger: Сообщение
+  scope: source.bsl
+  content: |+
+    Сообщение = Новый СообщениеПользователю;
+    Сообщение.Текст = "$0";
+    Сообщение.Поле = "";
+    Сообщение.УстановитьДанные();
+    Сообщение.Сообщить();
+- description: Предупреждение
+  tabTrigger: Предупреждение
+  scope: source.bsl
+  content: "Предупреждение($0);"
+- description: Формат
+  tabTrigger: Формат
+  scope: source.bsl
+  content: "Формат($0, \"$1\")"
+- description: Создать структуру
+  tabTrigger: Структура
+  scope: source.bsl
+  content: "Новый Структура(\"$0\", )"
+- description: Запрос
+  tabTrigger: Запрос
+  scope: source.bsl
+  content: |+
+    Запрос = Новый Запрос;
+    Запрос.Текст = "$1";
+    Результат = Запрос.Выполнить();
+    Выборка = Результат.Выбрать();
+    Пока Выборка.Следующий() Цикл
+      $0
+    КонецЦикла;
+- description: Запрос с параметром
+  tabTrigger: Запрос
+  scope: source.bsl
+  content: |+
+    Запрос = Новый Запрос;
+    Запрос.Текст = "$1";
+    Запрос.УстановитьПараметр("$0", );
+    Результат = Запрос.Выполнить();
+    Выборка = Результат.Выбрать();
+    Пока Выборка.Следующий() Цикл
+    КонецЦикла;
+- description: Вопрос
+  tabTrigger: Вопрос
+  scope: source.bsl
+  content: "Вопрос(\"${1:ТекстВопроса}\", ${2:РежимДиалогаВопрос})"
+- description: Вопрос с анализом результата
+  tabTrigger: Вопрос
+  scope: source.bsl
+  content: "Вопрос(\"${1:ТекстВопроса}\", ${2:РежимДиалогаВопрос}) = ${3:КодВозвратаДиалога}"
+- description: Проверка типа
+  tabTrigger: ПроверитьТип
+  scope: source.bsl
+  content: |+
+    Если ТипЗнч(${1:ВыражениеДляПроверкиТипа}) = Тип("${2:ВыберитеТип}") Тогда
+    	$0
+    КонецЕсли;
+- description: If
+  tabTrigger: If
+  scope: source.bsl
+  content: |+
+    If ${1:Condition} Then
+    	$0
+    EndIf;
+- description: IfElse
+  tabTrigger: If
+  scope: source.bsl
+  content: |+
+    If ${1:Condition} Then
+    	$0
+    Else
+    EndIf;
+- description: While
+  tabTrigger: While
+  scope: source.bsl
+  content: |+
+    While ${1:Condition} Do
+    	$0
+    EndDo;
+- description: For
+  tabTrigger: For
+  scope: source.bsl
+  content: |+
+    For ${1:Counter} To ${2:Limit} Do
+    	$0
+    EndDo;
+- description: For Each
+  tabTrigger: ForEach
+  scope: source.bsl
+  content: |+
+    For Each ${1:Variable} In ${2:Collection} Do
+    	$0
+    EndDo;
+- description: Procedure
+  tabTrigger: Procedure
+  scope: source.bsl
+  content: |+
+    Procedure ${1:ProcedureName}()
+    	$0
+    EndProcedure
+- description: Procedure (with header)
+  tabTrigger: Procedure
+  scope: source.bsl
+  content: |+
+    // <Procedure description>
+    //
+    // Parameters:
+    //  <Parameter1>  - <Type.Subtype> - <parameter description>
+    //                  <parameter description continued>
+    //  <Parameter2>  - <Type.Subtype> - <parameter description>
+    //                  <parameter description continued>
+    //
+    Procedure ${1:ProcedureName}()
+    	$0
+    EndProcedure // ${1:ProcedureName}()
+- description: Procedure in a form module
+  tabTrigger: Procedure
+  scope: source.bsl
+  content: |+
+    // <Procedure description>
+    //
+    // Parameters:
+    //  <Parameter1>  - <Type.Subtype> - <parameter description>
+    //                  <parameter description continued>
+    //  <Parameter2>  - <Type.Subtype> - <parameter description>
+    //                  <parameter description continued>
+    //
+    &${1:ChooseACompilationDirective}
+    Procedure ${2:ProcedureName}()
+    	$0
+    EndProcedure // ${2:ProcedureName}()
+- description: Procedure in a command module
+  tabTrigger: Procedure
+  scope: source.bsl
+  content: |+
+    // <Procedure description>
+    //
+    // Parameters:
+    //  <Parameter1>  - <Type.Subtype> - <parameter description>
+    //                  <parameter description continued>
+    //  <Parameter2>  - <Type.Subtype> - <parameter description>
+    //                  <parameter description continued>
+    //
+    &${1:ChooseACompilationDirective}
+    Procedure ${2:ProcedureName}()
+    	$0
+    EndProcedure // ${2:ProcedureName}()
+- description: Function
+  tabTrigger: Function
+  scope: source.bsl
+  content: |+
+    Function ${1:FunctionName}()
+    	$0
+    EndFunction // ${1:FunctionName}()
+- description: Function (with header)
+  tabTrigger: Function
+  scope: source.bsl
+  content: |+
+    // <Function description>
+    //
+    //
+    // Parameters:
+    //  <Parameter1>  - <Type.Subtype> - <parameter description>
+    //                 <parameter description continued>
+    //  <Parameter2>  - <Type.Subtype> - <parameter description>
+    //                 <parameter description continued>
+    //
+    // Returns:
+    //   <Type.Subtype>   - <returned value description>
+    //
+    Function ${1:FunctionName}()
+    	$0
+    EndFunction // ${1:FunctionName}()
+- description: Function in a form module
+  tabTrigger: Function
+  scope: source.bsl
+  content: |+
+    // <Function description>
+    //
+    //
+    // Parameters:
+    //  <Parameter1>  - <Type.Subtype> - <parameter description>
+    //                 <parameter description continued>
+    //  <Parameter2>  - <Type.Subtype> - <parameter description>
+    //                 <parameter description continued>
+    //
+    // Returns:
+    //   <Type.Subtype>   - <returned value description>
+    //
+    &${1:ChooseACompilationDirective}
+    Function ${2:FunctionName}()
+    	$0
+    EndFunction // ${2:FunctionName}()
+- description: Function in a command module
+  tabTrigger: Function
+  scope: source.bsl
+  content: |+
+    // <Function description>
+    //
+    //
+    // Parameters:
+    //  <Parameter1>  - <Type.Subtype> - <parameter description>
+    //                 <parameter description continued>
+    //  <Parameter2>  - <Type.Subtype> - <parameter description>
+    //                 <parameter description continued>
+    //
+    // Returns:
+    //   <Type.Subtype>   - <returned value description>
+    //
+    &${1:ChooseACompilationDirective}
+    Function ${2:FunctionName}()
+    	$0
+    EndFunction // ${2:FunctionName}()
+- description: Return
+  tabTrigger: Return
+  scope: source.bsl
+  content: "Return;$0"
+- description: Try
+  tabTrigger: Try
+  scope: source.bsl
+  content: |+
+    Try
+    	$0
+    Except
+    EndTry;
+- description: Compilation directive
+  tabTrigger: Directive
+  scope: source.bsl
+  content: "&${1:ChooseACompilationDirective}"
+- description: Instruction If
+  tabTrigger: Instrution
+  scope: source.bsl
+  content: |+
+    #If ${1:ChooseAPreprocessorInstruction} Then
+    	$0
+    #EndIf
+- description: Instruction Region
+  tabTrigger: \#Region
+  scope: source.bsl
+  content: |+
+    #Region $0
+    #EndRegion
+- description: Enumeration
+  tabTrigger: Enums
+  scope: source.bsl
+  content: "PredefinedValue(\"Enum.${1:ChooseAnEnumerationValue}\")"
+- description: Get a functional option
+  tabTrigger: Functionaloption
+  scope: source.bsl
+  content: "GetFunctionalOption(\"${1:ChooseAFunctionalOption}\")"
+- description: Get an interface functional option
+  tabTrigger: Functionaloption
+  scope: source.bsl
+  content: "GetInterfaceFunctionalOption(\"${1:ChooseAFunctionalOption}\")"
+- description: Open a common form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"CommonForm.${1:ChooseACommonForm}\");"
+- description: Open a common form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("CommonForm.${1:ChooseACommonForm}", FormParameters);
+- description: Get a common form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"CommonForm.${1:ChooseACommonForm}\");"
+- description: Get a common form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("CommonForm.${1:ChooseACommonForm}");
+- description: Open an exchange plan form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"ExchangePlan.${1:ChooseAnExchangePlan}.${2:ChooseForm}\");"
+- description: Open an exchange plan form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("ExchangePlan.${1:ChooseAnExchangePlan}.${2:ChooseForm}", FormParameters);
+- description: Get an exchange plan form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"ExchangePlan.${1:ChooseAnExchangePlan}.${2:ChooseForm}\");"
+- description: Get an exchange plan form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("ExchangePlan.${1:ChooseAnExchangePlan}.${2:ChooseForm}", FormParameters);
+- description: Items traversal
+  tabTrigger: ExchangePlansChoose
+  scope: source.bsl
+  content: |+
+    Selection = ExchangePlans.$1.Choose();
+    While Selection.Next() Do
+    	$0
+    EndDo;
+- description: Get/Set constant
+  tabTrigger: Constants
+  scope: source.bsl
+  content: "Constants.$1.${2:SelectVariant}()"
+- description: Set constant
+  tabTrigger: Constants
+  scope: source.bsl
+  content: "Constants.$1.Set($0);"
+- description: Get constant
+  tabTrigger: Constants
+  scope: source.bsl
+  content: "Constants.$1.Get()"
+- description: Open a catalog form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"Catalog.${1:ChooseACatalog}.${2:ChooseForm}$0\");"
+- description: Open a catalog form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("Catalog.${1:ChooseCatalog}.${2:ChooseForm}", FormParameters);
+- description: Get a catalog form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"Catalog.${1:ChooseACatalog}.${2:ChooseForm}$0\");"
+- description: Get a catalog form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("Catalog.${1:ChooseCatalog}.${2:ChooseForm}", FormParameters);
+- description: Item traversal
+  tabTrigger: CatalogsSelect
+  scope: source.bsl
+  content: |+
+    Select = Catalogs.$1.Select();
+    While Select.Next() Do
+    	$0
+    EndDo;
+- description: Items hierarchical traversal
+  tabTrigger: CatalogsSelectHierarchicaly
+  scope: source.bsl
+  content: |+
+    Select = Catalogs.$1.SelectHierarchicaly();
+    While Select.Next() Do
+    	$0
+    EndDo;
+- description: Open a document form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"Document.${1:ChooseADocument}.${2:ChooseForm}$0\");"
+- description: Open a document form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("Document.${1:ChooseADocument}.${2:ChooseForm}", FormParameters);
+- description: Get a document form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"Document.${1:ChooseADocument}.${2:ChooseForm}$0\");"
+- description: Get a document form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("Document.${1:ChooseADocument}.${2:ChooseForm}", FormParameters);
+- description: Document walk-through
+  tabTrigger: DocumentsSelect
+  scope: source.bsl
+  content: |+
+    Select = Documents.$1.Select();
+    While Selection.Next() Do
+    	$0
+    EndDo;
+- description: RegisterRecords
+  tabTrigger: RegisterRecords
+  scope: source.bsl
+  content: "RegisterRecords.${1:ChooseARegister}"
+- description: Open a report form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"Report.${1:ChooseAReport}.${2:ChooseForm}$0\");"
+- description: Open a report form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("Report.${1:ChooseAReport}.${2:ChooseForm}", FormParameters);
+- description: Get a report form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"Report.${1:ChooseAReport}.${2:ChooseForm}$0\");"
+- description: Get a report form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("Report.${1:ChooseAReport}.${2:ChooseForm}", FormParameters);
+- description: Open a data processor form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"DataProcessor.${1:ChooseADataProcessor}.${2:ChooseForm}$0\");"
+- description: Open a data processor form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("DataProcessor.${1:ChooseADataProcessor}}.${2:ChooseForm}", FormParameters);
+- description: Get a data processor form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"DataProcessor.${1:ChooseADataProcessor}.${2:ChooseForm}$0\");"
+- description: Get a data processor form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("DataProcessor.${1:ChooseADataProcessor}.${2:ChooseForm}", FormParameters);
+- description: Open a chart of characteristic types form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"ChartOfCharacteristicTypes.${1:ChooseAChartOfCharateristicTypes}.${2:ChooseForm}$0\");"
+- description: Open a chart of characteristic types form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("ChartOfCharacteristicTypes.${1:ChooseAChartOfCharacteristicTypes}.${2:ChooseForm}", FormParameters);
+- description: Get a chart of characteristic types form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"ChartOfCharacteristicTypes.${1:ChooseAChartOfCharacteristicTypes}.${2:ChooseForm}$0\");"
+- description: Get a chart of characteristic types form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("ChartOfCharacteristicTypes.${1:ChooseAChartOfCharacteristicTypes}.${2:ChooseForm}", FormParameters);
+- description: Charts of characteristic types traversal
+  tabTrigger: ChartOfAccountsChoose
+  scope: source.bsl
+  content: |+
+    Selection = ChartOfAccounts.$1.Choose();
+    While Selection.Next() Do
+    	$0
+    EndDo;
+- description: Open a chart of accounts form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"ChartOfAccounts.${1:ChooseAChartOfAccounts}.${2:ChooseForm}$0\");"
+- description: Open a chart of accounts form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("ChartOfAccounts.${1:ChooseAChartOfAccounts}.${2:ChooseForm}", FormParameters);
+- description: Get a chart of accounts form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"ChartOfAccounts.${1:ChooseAChartOfAccounts}.${2:ChooseForm}$0\");"
+- description: Get a chart of accounts form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("ChartOfAccounts.${1:ChooseAChartOfAccounts}.${2:ChooseForm}", FormParameters);
+- description: Find by code
+  tabTrigger: ChartsOfAccounts
+  scope: source.bsl
+  content: "ChartsOfAccounts.$1.FindByCode($0)"
+- description: Open a chart of calculation types form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"ChartOfCalculationTypes.${1:ChooseAChartOfCalculationTypes}.${2:ChooseForm}$0\");"
+- description: Open a chart of calculation types form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("ChartOfCalculationTypes.${1:ChooseAChartOfCalculationTypes}.${2:ChooseForm}", FormParameters);
+- description: Get a chart of calculation types form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"ChartOfCalculationTypes.${1:ChooseAChartOfCalculationTypes}.${2:ChooseForm}$0\");"
+- description: Get a chart of calculation types form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("ChartOfCalculationTypes.${1:ChooseAChartOfCalculationTypes}.${2:ChooseForm}", FormParameters);
+- description: Charts of calculation types traversal
+  tabTrigger: ChartsOfCalculationTypesChoose
+  scope: source.bsl
+  content: |+
+    Selection = ChartsOfCalculationTypes.$1.Choose();
+    While Selection.Next() Do
+    	$0
+    EndDo;
+- description: Open a business process form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"BusinessProcess.${1:ChooseABusinessProcess}.${2:ChooseForm}$0\");"
+- description: Open a business process form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("BusinessProcess.${1:ChooseABusinessProcess}.${2:ChooseForm}", FormParameters);
+- description: Get a business process form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"BusinessProcess.${1:ChooseABusinessProcess}.${2:ChooseForm}$0\");"
+- description: Get a business process form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("BusinessProcess.${1:ChooseABusinessProcess}.${2:ChooseForm}", FormParameters);
+- description: Business processes traversal
+  tabTrigger: BusinessProcessesChoose
+  scope: source.bsl
+  content: |+
+    Selection = BusinessProcesses.$1.Choose();
+    While Selection.Next() Do
+    	$0
+    EndDo;
+- description: Open a task form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"Task.${1:ChooseATask}.${2:ChooseForm}$0\");"
+- description: Open a task form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("Task.${1:ChooseATask}.${2:ChooseForm}", FormParameters);
+- description: Get a task form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"Task.${1:ChooseATask}.${2:ChooseForm}$0\");"
+- description: Get a task form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("Task.${1:ChooseATask}.${2:ChooseForm}", FormParameters);
+- description: Open an information register form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"InformationRegister.${1:ChooseAnInformationRegister}.${2:ChooseForm}$0\");"
+- description: Open an information register form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("InformationRegister.${1:ChooseAnInformationRegister}.${2:ChooseForm}", FormParameters);
+- description: Get an information register form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"InformationRegister.${1:ChooseAnInformationRegister}.${2:ChooseForm}$0\");"
+- description: Get an information register form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("InformationRegister.${1:ChooseAnInformationRegister}.${2:ChooseForm}", FormParameters);
+- description: Selection of information register records
+  tabTrigger: InformationRegisterChoose
+  scope: source.bsl
+  content: |+
+    Selection = InformationRegister.${1:ChooseAnInformationRegister}.Choose();
+    While Selection.Next() Do
+    	$0
+    EndDo;
+- description: Selection of information register records (by recorder)
+  tabTrigger: InformationRegisterSelectByRecorder
+  scope: source.bsl
+  content: |+
+    Selection = InformationRegister.${1:ChooseAnInformationRegister}.SelectByRecorder($0);
+    While Selection.Next() Do
+    EndDo;
+- description: Open an accumulation register form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"AccumulationRegister.${1:ChooseAnAccumulationRegister}.${2:ChooseForm}$0\");"
+- description: Open an accumulation register form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("AccumulationRegister.${1:ChooseAnAccumulationRegister}.${2:ChooseForm}", FormParameters);
+- description: Get an accumulation register form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"AccumulationRegister.${1:ChooseAnAccumulationRegister}.${2:ChooseForm}$0\");"
+- description: Get an accumulation register form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("AccumulationRegister.${1:ChooseAnAccumulationRegister}.${2:ChooseForm}", FormParameters);
+- description: Selection of accumulation register records
+  tabTrigger: AccumulationRegisterChoose
+  scope: source.bsl
+  content: |+
+    Selection = AccumulationRegister.${1:ChooseAnAccumulationRegister}.Choose();
+    While Selection.Next() Do
+    	$0
+    EndDo;
+- description: Selection of accumulation register records (by recorder)
+  tabTrigger: AccumulationRegisterSelectByRecorder
+  scope: source.bsl
+  content: |+
+    Selection = AccumulationRegister.${1:ChooseAnAccumulationRegister}.SelectByRecorder($0);
+    While Selection.Next() Do
+    EndDo;
+- description: Open an accounting register form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"AccountingRegister.${1:ChooseAnAccountingRegister}.${2:ChooseForm}$0\");"
+- description: Open an accounting register form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("AccountingRegister.${1:ChooseAnAccountingRegister}.${2:ChooseForm}", FormParameters);
+- description: Get an accounting register form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"AccountingRegister.${1:ChooseAnAccountingRegister}.${2:ChooseForm}$0\");"
+- description: Get an accounting register form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("AccountingRegister.${1:ChooseAnAccountingRegister}.${2:ChooseForm}", FormParameters);
+- description: Selection of accounting register records
+  tabTrigger: AccountingRegisterChoose
+  scope: source.bsl
+  content: |+
+    Selection = AccountingRegister.${1:ChooseAnAccountingRegister}.Choose();
+    While Selection.Next() Do
+    	$0
+    EndDo;
+- description: Selection of accounting register records (by recorder)
+  tabTrigger: AccountingRegisterSelectByRecorder
+  scope: source.bsl
+  content: |+
+    Selection = AccountingRegister.${1:ChooseAnAccountingRegister}.SelectByRecorder($0);
+    While Selection.Next() Do
+    EndDo;
+- description: Open a calculation register form
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: "OpenForm(\"CalculationRegister.${1:ChooseACalculationRegister}.${2:ChooseForm}$0\");"
+- description: Open a calculation register form (with parameters)
+  tabTrigger: OpenForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    OpenForm("CalculationRegister.${1:ChooseACalculationRegister}.${2:ChooseForm}", FormParameters);
+- description: Get a calculation register form
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: "GetForm(\"CalculationRegister.${1:ChooseACalculationRegister}.${2:ChooseForm}$0\");"
+- description: Get a calculation register form (with parameters)
+  tabTrigger: GetForm
+  scope: source.bsl
+  content: |+
+    FormParameters = New Structure;
+    FormParameters.Insert("$0", );
+    Form = GetForm("CalculationRegister.${1:ChooseACalculationRegister}.${2:ChooseForm}", FormParameters);
+- description: Selection of calculation register records
+  tabTrigger: CalculationRegisterChoose
+  scope: source.bsl
+  content: |+
+    Selection = CalculationRegister.${1:ChooseACalculationRegister}.Choose();
+    While Selection.Next() Do
+    	$0
+    EndDo;
+- description: Selection of calculation register records (by recorder)
+  tabTrigger: CalculationRegisterSelectByRecorder
+  scope: source.bsl
+  content: |+
+    Selection = CalculationRegister.${1:ChooseACalculationRegister}.SelectByRecorder($0);
+    While Selection.Next() Do
+    EndDo;
+- description: Message
+  tabTrigger: Message
+  scope: source.bsl
+  content: |+
+    Message = New UserMessage;
+    Message.Text = "$0";
+    Message.Field = "";
+    Message.SetData();
+    Message.Message();
+- description: DoMessageBox
+  tabTrigger: DoMessageBox
+  scope: source.bsl
+  content: "DoMessageBox($0);"
+- description: Format
+  tabTrigger: Format
+  scope: source.bsl
+  content: "Format($0, \"$1\")"
+- description: Create a structure
+  tabTrigger: Structure
+  scope: source.bsl
+  content: "New Structure(\"$0\", )"
+- description: Query
+  tabTrigger: Query
+  scope: source.bsl
+  content: |+
+    Query = New Query;
+    Query.Text = "$1";
+    Result = Query.Execute();
+    Selection = Result.Choose();
+    While Selection.Next() Do
+      $0
+    EndDo;
+- description: Query with parameter
+  tabTrigger: Query
+  scope: source.bsl
+  content: |+
+    Query = New Query;
+    Query.Text = "$1";
+    Query.SetParameter("$0", );
+    Result = Query.Execute();
+    Selection = Result.Choose();
+    While Selection.Next() Do
+    EndDo;
+- description: Promt
+  tabTrigger: DoQueryBox
+  scope: source.bsl
+  content: "DoQueryBox(\"${1:PromptText}\", ${2:DialogPrompt})"
+- description: Conditional Prompt
+  tabTrigger: DoQueryBox
+  scope: source.bsl
+  content: "DoQueryBox(\"${1:PromptText}\", ${2:DialogPrompt}) = ${3:DialogReturnCode}"
+- description: Type check
+  tabTrigger: TypeCheck
+  scope: source.bsl
+  content: |+
+    If TypeOf(${1:ExpressionForTypeCheck}) = Type("${2:ChooseType}") Then
+    	$0
+    EndIf;
