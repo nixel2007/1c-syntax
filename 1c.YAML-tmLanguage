@@ -12,7 +12,7 @@ patterns:
 
   - name: string.quoted.double.bsl
     begin: \"
-    end: \"
+    end: \"(?![\"])
     patterns:
     - include: '#query'
     - name: constant.character.escape.bsl
