@@ -40,9 +40,10 @@ patterns:
       match: (?i:[a-zа-яё0-9_]+)
 
   - comment: "Define of variable"
-    begin: (?i:(?<=[^\wа-яё]|^)(Перем|Var)\s+[a-zа-яё0-9_]+\s*)
+    begin: (?i:(?<=[^\wа-яё]|^)(Перем|Var)\s+([a-zа-яё0-9_]+)\s*)
     beginCaptures:
       '1': {name: storage.type.var.bsl}
+      '2': {name: variable.bsl}
     end: (?i:(Экспорт|Export)?)
     endCaptures:
       '1': {name: storage.modifier.bsl}
