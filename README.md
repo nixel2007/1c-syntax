@@ -2,6 +2,9 @@
 
 [![Join the chat at https://gitter.im/xDrivenDevelopment/1c-syntax](https://badges.gitter.im/xDrivenDevelopment/1c-syntax.svg)](https://gitter.im/xDrivenDevelopment/1c-syntax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) Здесь вы можете задавать любые вопросы разработчикам и активным участникам
 
+[![Build Status](https://travis-ci.org/xDrivenDevelopment/atom-language-1c-bsl.svg?branch=master)](https://travis-ci.org/xDrivenDevelopment/atom-language-1c-bsl)
+[![Build status](https://ci.appveyor.com/api/projects/status/y42clq0jgf3vth2c/branch/master?svg=true)](https://ci.appveyor.com/project/nixel2007/atom-language-1c-bsl/branch/master) (atom-grammar-test)
+
 Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (Sublime Text, Atom and VS Code).
 
 ## Цель репозитория
