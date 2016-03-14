@@ -15,7 +15,7 @@ patterns:
 
   - name: string.quoted.double.sdbl
     begin: \"
-    end: \"
+    end: \"(?![\"])
     patterns:
     - name: constant.character.escape.sdbl
       match: \"\"
