@@ -37,9 +37,6 @@ patterns:
   - name: keyword.operator.comparison.sdbl
     match: <=|>=|=|<|>
 
-  - name: keyword.operator.assignment.sdbl
-    match: (=)
-
   - name: keyword.operator.arithmetic.sdbl
     match: (\+|-|\*|/|%)
 
