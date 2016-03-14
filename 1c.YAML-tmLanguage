@@ -55,7 +55,7 @@ patterns:
     match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b
 
   - name: constant.other.date.bsl
-    match: \'((\d{6})|(\d{12}))\'
+    match: \'((\d{8})|(\d{14}))\'
 
   - name: storage.type.bsl
     match: (?i:(?<=[^\wа-яё]|^)(КонецПроцедуры|EndProcedure|КонецФункции|EndFunction)(?=[^\wа-яё]|$))
