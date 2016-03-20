@@ -61,7 +61,7 @@ patterns:
     match: (?i:(?<=[^\wа-яё]|^)(КонецПроцедуры|EndProcedure|КонецФункции|EndFunction)(?=[^\wа-яё]|$))
 
   - name: keyword.control.import.bsl
-    match: \#(Использовать|Use)(?=[^\wа-яё]|$)
+    match: (?i)#(Использовать|Use)(?=[^\wа-яё]|$)
 
   - name: keyword.control.bsl
     match: (?i:(?<=[^\wа-яё]|^)(Прервать|Break|Продолжить|Continue|Возврат|Return)(?=[^\wа-яё]|$))
