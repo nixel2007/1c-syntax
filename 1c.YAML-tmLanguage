@@ -221,7 +221,7 @@ patterns:
 
 repository:
   query:
-    begin: (?i)(Выбрать|Select(\s+Разрешенные|Allowed)?(\s+Различные|Distinct)?(\s+Первые|Top)?)
+    begin: (?i)(?<=[^\wа-яё\.]|^)(Выбрать|Select(\s+Разрешенные|Allowed)?(\s+Различные|Distinct)?(\s+Первые|Top)?)(?=[^\wа-яё\.]|$)
     beginCaptures:
       '1': {name: keyword.control.sdbl}
     end: (?=\"[^\"])
