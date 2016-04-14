@@ -176,7 +176,7 @@
     	$0
     #КонецЕсли
 - description: Инструкция Область
-  tabTrigger: \#Область
+  tabTrigger: Область
   scope: source.bsl
   content: |+
     #Область $0
@@ -897,7 +897,7 @@
     	$0
     #EndIf
 - description: Instruction Region
-  tabTrigger: \#Region
+  tabTrigger: Region
   scope: source.bsl
   content: |+
     #Region $0
